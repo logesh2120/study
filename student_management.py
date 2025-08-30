@@ -31,4 +31,4 @@ s1.display()
 # researchtopic
 
 s2 = GraduateStudent("bob",100,"cse")
-s2.display()
+s2.display()  
