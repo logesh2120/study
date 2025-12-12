@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenHaven | Plant Services & Landscaping</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="text-gray-800 bg-gray-50">
+
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center text-green-700 text-2xl font-bold"><i class="fa-solid fa-leaf mr-2"></i> GreenHaven</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-green-600">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-green-600">About</a>
+                    <a href="services.html" class="text-green-600 font-bold">Services</a> <a href="shop.html" class="text-gray-600 hover:text-green-600">Shop</a>
+                    <a href="gallery.html" class="text-gray-600 hover:text-green-600">Gallery</a>
+                    <a href="contact.html" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-green-800 text-white pt-32 pb-12 text-center">
+        <h1 class="text-4xl font-bold">Expert Plant Services & Landscaping</h1>
+        <p class="mt-2 text-green-200">Solutions for thriving, beautiful outdoor and indoor spaces.</p>
+    </header>
+
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 border-b-2 border-green-500 inline-block pb-1">Landscaping & Design</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            
+            <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
+                <i class="fa-solid fa-drafting-compass text-4xl text-green-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-3">Custom Design</h3>
+                <p class="text-gray-600 mb-4">Full conceptual design, 3D renderings, and professional blueprint creation tailored to your budget.</p>
+                <a href="contact.html" class="text-green-600 font-semibold hover:text-green-800">Start Project →</a>
+            </div>
+
+            <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
+                <i class="fa-solid fa-tree-city text-4xl text-green-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-3">Installation & Build</h3>
+                <p class="text-gray-600 mb-4">Expert execution of landscaping plans, including hardscaping (paths, walls) and softscaping (planting).</p>
+                <a href="contact.html" class="text-green-600 font-semibold hover:text-green-800">Request Quote →</a>
+            </div>
+
+            <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
+                <i class="fa-solid fa-water text-4xl text-green-600 mb-4"></i>
+                <h3 class="text-xl font-bold mb-3">Irrigation Systems</h3>
+                <p class="text-gray-600 mb-4">Installation of smart, water-efficient drip and sprinkler systems for effortless garden care.</p>
+                <a href="contact.html" class="text-green-600 font-semibold hover:text-green-800">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 border-b-2 border-green-500 inline-block pb-1">Garden Maintenance & Care</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-green-700">What's Included?</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>**Seasonal Pruning:** Ensuring optimal health and shape for all trees and shrubs.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>**Weed & Pest Control:** Using safe, organic solutions to protect your plants.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>**Soil & Fertilization:** Soil health testing and customized organic feeding programs.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>**Lawn Care:** Mowing, aeration, and overseeding for a lush, green turf.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-green-700">Maintenance Plans</h3>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <div class="flex justify-between items-center border-b pb-3 mb-3">
+                            <span class="font-semibold">Basic Care (Monthly)</span>
+                            <span class="text-xl font-bold text-green-600">$199 / month</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-3 mb-3">
+                            <span class="font-semibold">Premium (Bi-Weekly)</span>
+                            <span class="text-xl font-bold text-green-600">$349 / month</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3">
+                            <span class="font-semibold">Full Service (Weekly)</span>
+                            <span class="text-xl font-bold text-green-600">$599 / month</span>
+                        </div>
+                        <a href="contact.html" class="block mt-4 text-center bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">Book A Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-green-100 py-12 text-center">
+        <h3 class="text-3xl font-bold mb-3 text-green-800">Ready to Transform Your Space?</h3>
+        <p class="text-gray-700 mb-6">Contact us today for a free site assessment and customized proposal.</p>
+        <a href="contact.html" class="bg-green-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-green-700 transition shadow-lg">Get Started Now</a>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-10 mt-auto text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2024 GreenHaven Nursery. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/1234567890" class="fixed bottom-10 right-10 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+</body>
+</html>
