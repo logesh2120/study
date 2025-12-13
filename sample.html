@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenHaven | Nursery, Landscaping & Shop</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body { font-family: 'Poppins', sans-serif; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            /* Added padding-top to compensate for the fixed navbar height */
+            padding-top: 5rem;
+        }
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
@@ -47,275 +54,246 @@
         }
     </style>
 </head>
-<body class="text-gray-800 bg-gray-50">
 
-    <nav class="bg-white shadow-lg fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center">
-                    <a href="#" class="flex items-center text-green-700 text-2xl font-bold">
-                        <i class="fa-solid fa-leaf mr-2"></i> GreenHaven
-                    </a>
+<body class="text-gray-800 bg-gray-50 min-h-screen flex flex-col">
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="flex-grow">
+        <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4 relative -mt-20">
+            <div class="max-w-4xl text-white z-10">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">Bring Nature to Your Doorstep</h1>
+                <p class="text-lg md:text-xl mb-8 opacity-90 drop-shadow-md">Premium plants, expert landscaping, and professional garden care services.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#shop" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition transform hover:-translate-y-1 shadow-lg">Buy Plants</a>
+                    <a href="#contact" class="bg-white hover:bg-gray-100 text-green-800 font-semibold py-3 px-8 rounded-full transition transform hover:-translate-y-1 shadow-lg">Get a Quote</a>
                 </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 relative">
+                        <div class="absolute -top-4 -left-4 w-20 h-20 bg-green-200 rounded-full opacity-50 z-0"></div>
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nursery owner" class="rounded-lg shadow-xl w-full relative z-10">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-green-600 font-bold uppercase tracking-wide mb-2">About GreenHaven</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-6">Growing Green Since 2010</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            We are a team of passionate horticulturists dedicated to transforming spaces. From indoor desk plants to massive landscape projects, we handle it all with care and organic practices.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i> 100% Organic Fertilizers</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i> Home Delivery Available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Expert care for your green spaces.</p>
                 
-                <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="text-gray-600 hover:text-green-600 font-medium transition">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-green-600 font-medium transition">About</a>
-                    <a href="#services" class="text-gray-600 hover:text-green-600 font-medium transition">Services</a>
-                    <a href="#shop" class="text-green-600 font-bold hover:text-green-800 transition">Shop Plants</a>
-                    <a href="#gallery" class="text-gray-600 hover:text-green-600 font-medium transition">Gallery</a>
-                    <a href="#contact" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition shadow-md">Contact Us</a>
-                </div>
-
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="#home" class="block py-3 px-4 text-gray-600 hover:bg-green-50">Home</a>
-            <a href="#about" class="block py-3 px-4 text-gray-600 hover:bg-green-50">About</a>
-            <a href="#services" class="block py-3 px-4 text-gray-600 hover:bg-green-50">Services</a>
-            <a href="#shop" class="block py-3 px-4 text-green-600 font-bold hover:bg-green-50">Shop Plants</a>
-            <a href="#gallery" class="block py-3 px-4 text-gray-600 hover:bg-green-50">Gallery</a>
-            <a href="#contact" class="block py-3 px-4 text-gray-600 hover:bg-green-50">Contact Us</a>
-        </div>
-    </nav>
-
-    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4 relative">
-        <div class="max-w-4xl text-white z-10">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">Bring Nature to Your Doorstep</h1>
-            <p class="text-lg md:text-xl mb-8 opacity-90 drop-shadow-md">Premium plants, expert landscaping, and professional garden care services.</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#shop" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition transform hover:-translate-y-1 shadow-lg">Buy Plants</a>
-                <a href="#contact" class="bg-white hover:bg-gray-100 text-green-800 font-semibold py-3 px-8 rounded-full transition transform hover:-translate-y-1 shadow-lg">Get a Quote</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2 relative">
-                    <div class="absolute -top-4 -left-4 w-20 h-20 bg-green-200 rounded-full opacity-50 z-0"></div>
-                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nursery owner" class="rounded-lg shadow-xl w-full relative z-10">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-green-600 font-bold uppercase tracking-wide mb-2">About GreenHaven</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold mb-6">Growing Green Since 2010</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        We are a team of passionate horticulturists dedicated to transforming spaces. From indoor desk plants to massive landscape projects, we handle it all with care and organic practices.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i> 100% Organic Fertilizers</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-3"></i> Home Delivery Available</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-            <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Expert care for your green spaces.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition duration-300 border-b-4 border-green-500">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600 text-2xl">
-                        <i class="fa-solid fa-seedling"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Plant Sales</h3>
-                    <p class="text-gray-600 text-sm">Wide range of indoor, outdoor, and medicinal plants.</p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition duration-300 border-b-4 border-green-500">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600 text-2xl">
-                        <i class="fa-solid fa-trowel"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Landscaping</h3>
-                    <p class="text-gray-600 text-sm">Professional design and execution for gardens and parks.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition duration-300 border-b-4 border-green-500">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600 text-2xl">
-                        <i class="fa-solid fa-scissors"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Maintenance</h3>
-                    <p class="text-gray-600 text-sm">Regular pruning, fertilizing, and pest control.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="shop" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Best Selling Plants</h2>
-            <p class="text-gray-600 text-center mb-12">Order now and get fresh plants delivered to your door.</p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                
-                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 relative group">
-                    <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">SALE</span>
-                    <div class="overflow-hidden h-64 bg-gray-100">
-                        <img src="https://images.unsplash.com/photo-1598522328731-155519db1021?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Snake Plant" class="product-img w-full h-full object-cover">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold text-gray-800">Snake Plant</h3>
-                        <div class="text-yellow-400 text-xs mb-2">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition duration-300 border-b-4 border-green-500">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600 text-2xl">
+                            <i class="fa-solid fa-seedling"></i>
                         </div>
-                        <div class="flex justify-between items-center mb-4">
-                            <div>
-                                <span class="text-gray-400 line-through text-sm">$25.00</span>
-                                <span class="text-green-600 font-bold text-xl">$15.00</span>
-                            </div>
-                        </div>
-                        <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20buy%20the%20Snake%20Plant." target="_blank" class="block w-full text-center bg-gray-900 text-white py-2 rounded hover:bg-green-600 transition">Buy Now</a>
+                        <h3 class="text-xl font-bold mb-3">Plant Sales</h3>
+                        <p class="text-gray-600 text-sm">Wide range of indoor, outdoor, and medicinal plants.</p>
                     </div>
-                </div>
-
-                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 relative group">
-                    <div class="overflow-hidden h-64 bg-gray-100">
-                        <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Monstera" class="product-img w-full h-full object-cover">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold text-gray-800">Monstera</h3>
-                        <div class="text-yellow-400 text-xs mb-2">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
-                        </div>
-                        <div class="flex justify-between items-center mb-4">
-                            <div>
-                                <span class="text-green-600 font-bold text-xl">$35.00</span>
-                            </div>
-                        </div>
-                        <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20buy%20the%20Monstera." target="_blank" class="block w-full text-center bg-gray-900 text-white py-2 rounded hover:bg-green-600 transition">Buy Now</a>
-                    </div>
-                </div>
-
-                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 relative group">
-                    <span class="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
-                    <div class="overflow-hidden h-64 bg-gray-100">
-                        <img src="https://images.unsplash.com/photo-1599598425947-320d41865c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bonsai" class="product-img w-full h-full object-cover">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold text-gray-800">Ficus Bonsai</h3>
-                        <div class="text-yellow-400 text-xs mb-2">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="flex justify-between items-center mb-4">
-                            <div>
-                                <span class="text-green-600 font-bold text-xl">$55.00</span>
-                            </div>
-                        </div>
-                        <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20buy%20the%20Ficus%20Bonsai." target="_blank" class="block w-full text-center bg-gray-900 text-white py-2 rounded hover:bg-green-600 transition">Buy Now</a>
-                    </div>
-                </div>
-
-                <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 relative group">
-                    <div class="overflow-hidden h-64 bg-gray-100">
-                        <img src="https://images.unsplash.com/photo-1628543108323-2895f32b8744?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Aloe Vera" class="product-img w-full h-full object-cover">
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold text-gray-800">Aloe Vera</h3>
-                        <div class="text-yellow-400 text-xs mb-2">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
-                        </div>
-                        <div class="flex justify-between items-center mb-4">
-                            <div>
-                                <span class="text-gray-400 line-through text-sm">$12.00</span>
-                                <span class="text-green-600 font-bold text-xl">$10.00</span>
-                            </div>
-                        </div>
-                        <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20buy%20the%20Aloe%20Vera." target="_blank" class="block w-full text-center bg-gray-900 text-white py-2 rounded hover:bg-green-600 transition">Buy Now</a>
-                    </div>
-                </div>
-
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#" class="inline-block border-2 border-green-600 text-green-600 font-bold py-2 px-6 rounded-full hover:bg-green-600 hover:text-white transition">View All Products</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="py-20 bg-green-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Projects</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="overflow-hidden rounded-lg shadow-md h-64">
-                    <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Plant 1">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-md h-64 md:col-span-2">
-                    <img src="https://images.unsplash.com/photo-1558293842-c0fd3db8415e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Landscape">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-md h-64">
-                    <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Plant 3">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-md h-64">
-                    <img src="https://images.unsplash.com/photo-1525642959800-410d70eb06b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Plant 4">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-md h-64">
-                    <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Plant 5">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-md h-64 md:col-span-2">
-                    <img src="https://images.unsplash.com/photo-1628198904791-729013083636?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Backyard">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get In Touch</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-100">
-                <div class="p-8 md:p-12">
-                    <h3 class="text-2xl font-semibold mb-6">Send us a Query</h3>
                     
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" name="name" required class="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50">
+                    <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition duration-300 border-b-4 border-green-500">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600 text-2xl">
+                            <i class="fa-solid fa-trowel"></i>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" name="email" required class="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea name="message" rows="4" required class="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition">Send Message</button>
-                    </form>
+                        <h3 class="text-xl font-bold mb-3">Landscaping</h3>
+                        <p class="text-gray-600 text-sm">Professional design and execution for gardens and parks.</p>
+                    </div>
 
-                    <div class="mt-8 space-y-4 border-t pt-8">
-                        <div class="flex items-center text-gray-600">
-                            <i class="fa-solid fa-phone text-green-600 w-8"></i>
-                            <span>+1 234 567 8900</span>
+                    <div class="bg-white p-8 rounded-xl shadow hover:shadow-2xl transition duration-300 border-b-4 border-green-500">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600 text-2xl">
+                            <i class="fa-solid fa-scissors"></i>
                         </div>
-                        <div class="flex items-center text-gray-600">
-                            <i class="fa-solid fa-envelope text-green-600 w-8"></i>
-                            <span>contact@greenhaven.com</span>
-                        </div>
+                        <h3 class="text-xl font-bold mb-3">Maintenance</h3>
+                        <p class="text-gray-600 text-sm">Regular pruning, fertilizing, and pest control.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="relative h-64 md:h-auto bg-gray-300">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153169!3d-37.81732344202113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f7f1f84!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1600000000000!5m2!1sen!2sau" 
-                        class="absolute inset-0 w-full h-full border-0" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
+        <section id="shop" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Best Selling Plants</h2>
+                <p class="text-gray-600 text-center mb-12">Order now and get fresh plants delivered to your door.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                    
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 relative group">
+                        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">SALE</span>
+                        <div class="overflow-hidden h-64 bg-gray-100">
+                            <img src="https://images.unsplash.com/photo-1598522328731-155519db1021?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Snake Plant" class="product-img w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Snake Plant</h3>
+                            <div class="text-yellow-400 text-xs mb-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <span class="text-gray-400 line-through text-sm">$25.00</span>
+                                    <span class="text-green-600 font-bold text-xl">$15.00</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20buy%20the%20Snake%20Plant." target="_blank" class="block w-full text-center bg-gray-900 text-white py-2 rounded hover:bg-green-600 transition">Buy Now</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 relative group">
+                        <div class="overflow-hidden h-64 bg-gray-100">
+                            <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Monstera" class="product-img w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Monstera</h3>
+                            <div class="text-yellow-400 text-xs mb-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <span class="text-green-600 font-bold text-xl">$35.00</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20buy%20the%20Monstera." target="_blank" class="block w-full text-center bg-gray-900 text-white py-2 rounded hover:bg-green-600 transition">Buy Now</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 relative group">
+                        <span class="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded z-10">NEW</span>
+                        <div class="overflow-hidden h-64 bg-gray-100">
+                            <img src="https://images.unsplash.com/photo-1599598425947-320d41865c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bonsai" class="product-img w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Ficus Bonsai</h3>
+                            <div class="text-yellow-400 text-xs mb-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <span class="text-green-600 font-bold text-xl">$55.00</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20buy%20the%20Ficus%20Bonsai." target="_blank" class="block w-full text-center bg-gray-900 text-white py-2 rounded hover:bg-green-600 transition">Buy Now</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 relative group">
+                        <div class="overflow-hidden h-64 bg-gray-100">
+                            <img src="https://images.unsplash.com/photo-1628543108323-2895f32b8744?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Aloe Vera" class="product-img w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800">Aloe Vera</h3>
+                            <div class="text-yellow-400 text-xs mb-2">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <span class="text-gray-400 line-through text-sm">$12.00</span>
+                                    <span class="text-green-600 font-bold text-xl">$10.00</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20buy%20the%20Aloe%20Vera." target="_blank" class="block w-full text-center bg-gray-900 text-white py-2 rounded hover:bg-green-600 transition">Buy Now</a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-block border-2 border-green-600 text-green-600 font-bold py-2 px-6 rounded-full hover:bg-green-600 hover:text-white transition">View All Products</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="bg-gray-900 text-white py-10">
+        <section id="gallery" class="py-20 bg-green-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Projects</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="overflow-hidden rounded-lg shadow-md h-64">
+                        <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Plant 1">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md h-64 md:col-span-2">
+                        <img src="https://images.unsplash.com/photo-1558293842-c0fd3db8415e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Landscape">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md h-64">
+                        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Plant 3">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md h-64">
+                        <img src="https://images.unsplash.com/photo-1525642959800-410d70eb06b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Plant 4">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md h-64">
+                        <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Plant 5">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md h-64 md:col-span-2">
+                        <img src="https://images.unsplash.com/photo-1628198904791-729013083636?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Backyard">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get In Touch</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-100">
+                    <div class="p-8 md:p-12">
+                        <h3 class="text-2xl font-semibold mb-6">Send us a Query</h3>
+                        
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Name</label>
+                                <input type="text" name="name" required class="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" name="email" required class="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Message</label>
+                                <textarea name="message" rows="4" required class="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition">Send Message</button>
+                        </form>
+
+                        <div class="mt-8 space-y-4 border-t pt-8">
+                            <div class="flex items-center text-gray-600">
+                                <i class="fa-solid fa-phone text-green-600 w-8"></i>
+                                <span>+1 234 567 8900</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="fa-solid fa-envelope text-green-600 w-8"></i>
+                                <span>contact@greenhaven.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative h-64 md:h-auto bg-gray-300">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153169!3d-37.81732344202113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f7f1f84!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1600000000000!5m2!1sen!2sau" 
+                            class="absolute inset-0 w-full h-full border-0" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-white py-10 mt-auto">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
                 <span class="text-2xl font-bold text-green-500"><i class="fa-solid fa-leaf"></i> GreenHaven</span>
@@ -335,12 +313,22 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <script src="loader.js"></script> 
+    
     <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+        // Since the navbar content is now loaded dynamically, this script must be run 
+        // *after* the DOM is updated by loader.js or modified to run after loading. 
+        // For simplicity in this static change, we'll assume the script runs fine
+        // after loader.js, or is ready to handle the elements once they exist.
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
         });
     </script>
 </body>

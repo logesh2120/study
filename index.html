@@ -3,92 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenHaven | Home</title>
+    <title>GreenHaven | Premium Plants and Landscaping</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Poppins', sans-serif; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+        }
         .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1920&q=80');
+            /* Increased darkness for better text readability */
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
     </style>
 </head>
-<body class="text-gray-800">
 
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="flex items-center text-green-700 text-2xl font-bold">
-                    <i class="fa-solid fa-leaf mr-2"></i> GreenHaven
-                </a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-green-600 font-bold">Home</a>
-                    <a href="about.html" class="text-gray-600 hover:text-green-600 transition">About</a>
-                    <a href="services.html" class="text-gray-600 hover:text-green-600 transition">Services</a>
-                    <a href="shop.html" class="text-gray-600 hover:text-green-600 transition">Shop</a>
-                    <a href="gallery.html" class="text-gray-600 hover:text-green-600 transition">Gallery</a>
-                    <a href="contact.html" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition">Contact Us</a>
-                </div>
-                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-gray-600">
-                    <i class="fa-solid fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="index.html" class="block py-3 px-4 text-green-600 font-bold">Home</a>
-            <a href="about.html" class="block py-3 px-4 text-gray-600">About</a>
-            <a href="services.html" class="block py-3 px-4 text-gray-600">Services</a>
-            <a href="shop.html" class="block py-3 px-4 text-gray-600">Shop</a>
-            <a href="Gallery.html" class="block py-3 px-4 text-gray-600">Gallery</a>
-            <a href="contact.html" class="block py-3 px-4 text-gray-600">Contact Us</a>
-        </div>
-    </nav>
-
-    <section class="hero-bg h-screen flex items-center justify-center text-center px-4">
-        <div class="max-w-4xl text-white mt-16">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Nature at Your Doorstep</h1>
-            <p class="text-xl mb-8">Premium plants and landscaping tailored for you.</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="shop.html" class="bg-green-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-green-700 transition">Buy Plants</a>
-                <a href="services.html" class="bg-white text-green-800 font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition">Our Services</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">Why Choose Us?</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <i class="fa-solid fa-truck text-green-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Fast Delivery</h3>
-                    <p>We deliver plants safely to your doorstep within 24 hours.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <i class="fa-solid fa-award text-green-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Expert Design</h3>
-                    <p>Award-winning landscape architects at your service.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <i class="fa-solid fa-hand-holding-droplet text-green-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Organic Care</h3>
-                    <p>We use 100% organic fertilizers and pesticides.</p>
+<body class="bg-white min-h-screen flex flex-col pt-20"> 
+    
+    <div id="navbar-placeholder"></div>
+    
+    <main class="flex-grow">
+        <section class="hero-bg min-h-[calc(100vh-5rem)] flex items-center justify-center text-center px-4">
+            <div class="max-w-4xl text-white pt-10 pb-20">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
+                    Nature at Your Doorstep
+                </h1>
+                <p class="text-lg md:text-xl mb-10 font-light drop-shadow">
+                    Premium plants and expert landscaping tailored for your sanctuary.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="shop.html" class="bg-green-600 text-white font-semibold py-3 px-10 rounded-full hover:bg-green-700 transition shadow-lg w-full sm:w-auto">
+                        Shop Our Collection
+                    </a>
+                    <a href="services.html" class="bg-white text-green-800 font-semibold py-3 px-10 rounded-full hover:bg-gray-100 transition shadow-lg w-full sm:w-auto border-2 border-green-600">
+                        Explore Services
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Why Choose GreenHaven?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fa-solid fa-truck text-green-600 text-5xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-green-700">Fast & Safe Delivery</h3>
+                        <p class="text-gray-600">We deliver live plants safely to your doorstep, often within 24-48 hours, ensuring freshness.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fa-solid fa-award text-green-600 text-5xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-green-700">Expert Landscape Design</h3>
+                        <p class="text-gray-600">Work with our certified landscape architects to create your perfect outdoor sanctuary.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fa-solid fa-hand-holding-droplet text-green-600 text-5xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-green-700">100% Organic Care</h3>
+                        <p class="text-gray-600">We commit to sustainability, using only organic fertilizers and non-toxic pest control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
     <footer class="bg-gray-900 text-white py-10 mt-auto">
         <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
             <p>&copy; 2024 GreenHaven Nursery. All rights reserved.</p>
         </div>
     </footer>
     
-    <a href="https://wa.me/1234567890" class="fixed bottom-10 right-10 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50">
+    <a href="https://wa.me/1234567890" class="fixed bottom-10 right-4 md:right-10 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
     </a>
+
+    <script src="loader.js"></script> 
 </body>
 </html>
