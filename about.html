@@ -3,92 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenHaven | About Us</title>
-    
+    <title>About Us | TPS Corporate Pte Ltd</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Poppins', sans-serif;
-            /* Explicitly setting padding-top to clear space for the fixed navbar */
-            padding-top: 5rem; 
-        }
+        body { font-family: 'Inter', sans-serif; padding-top: 5rem; }
+        .pillar-card:hover i { transform: scale(1.2) rotate(5deg); transition: all 0.3s ease; }
     </style>
 </head>
-
-<body class="text-gray-800 bg-white min-h-screen flex flex-col">
-
+<body class="bg-white text-gray-900">
     <div id="navbar-placeholder"></div>
 
-    <main class="flex-grow">
-        <div class="bg-gray-100 py-24 text-center">
-            <h1 class="text-4xl font-extrabold text-gray-900">Our Story & Mission</h1>
-            <p class="text-lg text-gray-600 mt-2">Cultivating green spaces and healthy living since 2010.</p>
-        </div>
+    <main>
+        <section class="relative py-24 bg-gray-900 overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-4">Leading the Way in <br><span class="text-green-500">Urban Forestry</span></h1>
+                <p class="text-green-200 font-bold tracking-widest uppercase text-xs">Certified expertise across Singapore</p>
+            </div>
+        </section>
 
-        <section class="max-w-7xl mx-auto px-4 py-16">
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1525923838300-38910a241a64?auto=format&fit=crop&w=800&q=80" alt="Plant nursery" class="rounded-xl shadow-2xl transition duration-300 transform hover:scale-[1.01]">
+        <section class="py-24 max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-sm font-black text-green-600 uppercase tracking-widest mb-4">The TPS Standard</h2>
+                    <h3 class="text-4xl font-bold text-gray-900 mb-8 leading-tight">Professional Tree Management Solutions </h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        TPS Corporate Pte Ltd is a Singapore-based arborist company dedicated to delivering high-tier certified tree care and professional tree management.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-10">
+                        Backed by ISA-certified arborists, we combine global industry standards with local safety practices. We empower property managers and residential owners with the expert knowledge needed to protect property value and maintain healthy green environments.
+                    </p>
+                    
+                    <div class="p-8 bg-gray-50 border-l-8 border-green-600 rounded-r-3xl">
+                        <h4 class="text-xs font-black text-gray-400 uppercase mb-2">Our Mission</h4>
+                        <p class="text-2xl font-semibold text-gray-800 italic leading-snug">
+                            "To deliver safe, reliable, and professional tree services that enhance landscapes and safeguard communities."
+                        </p>
+                    </div>
                 </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-4xl font-bold mb-4 text-green-700 border-l-4 border-green-600 pl-3">Grown with Love</h2>
-                    <p class="mb-4 text-lg leading-relaxed text-gray-600">GreenHaven started in 2010 as a small backyard project fueled by a passion for botany. Today, we are one of the region's leading plant nurseries and fully certified landscaping firms, serving hundreds of residential and commercial clients.</p>
-                    <p class="mb-4 text-lg leading-relaxed text-gray-600 font-semibold">Our mission is simple: To bring a piece of nature into every concrete building. We believe that plants are not just decoration, but a lifestyle that brings peace, health, and a tangible connection to the natural world.</p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-center"><i class="fa-solid fa-seedling text-green-600 mr-2"></i> Premium, locally sourced plants.</li>
-                        <li class="flex items-center"><i class="fa-solid fa-users-gear text-green-600 mr-2"></i> Certified landscape architects and horticulturists.</li>
-                        <li class="flex items-center"><i class="fa-solid fa-leaf text-green-600 mr-2"></i> Commitment to sustainable and organic practices.</li>
-                    </ul>
+                
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=80" class="rounded-[3rem] shadow-2xl relative z-10" alt="Arborist at work">
+                    <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-green-100 rounded-full -z-0"></div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-green-50 py-16">
-            <div class="max-w-7xl mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-12 text-gray-800">Meet Our Experts</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-200">
-                        <h3 class="font-bold text-xl text-gray-900">John Doe</h3>
-                        <p class="text-green-600 font-medium">Landscape Architect</p>
-                        <p class="text-sm text-gray-500 mt-2">Specializing in sustainable and modern outdoor design.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-200">
-                        <h3 class="font-bold text-xl text-gray-900">Jane Smith</h3>
-                        <p class="text-green-600 font-medium">Head Horticulturist</p>
-                        <p class="text-sm text-gray-500 mt-2">Our expert in rare, exotic, and indoor plant care.</p>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Mike Johnson" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-200">
-                        <h3 class="font-bold text-xl text-gray-900">Mike Johnson</h3>
-                        <p class="text-green-600 font-medium">Garden Maintenance Lead</p>
-                        <p class="text-sm text-gray-500 mt-2">Oversees all installation and long-term care projects.</p>
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 uppercase">Why Partner with Us?</h2>
+                    <p class="text-gray-500 mt-4">Setting the benchmark for tree care excellence.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="pillar-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+                        <i class="fa-solid fa-user-check text-4xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Certified Consultants</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Direct access to ISA-certified arborist consultants for specialized site evaluations and tree health diagnosis.</p>
                     </div>
 
+                    <div class="pillar-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+                        <i class="fa-solid fa-hard-hat text-4xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Safety Focused</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Every operation is safety-focused, ensuring risk mitigation for high-traffic urban and industrial spaces.</p>
+                    </div>
+
+                    <div class="pillar-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+                        <i class="fa-solid fa-file-invoice text-4xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Transparent Reporting</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Clear, detailed reporting and transparent service processes designed for corporate and government compliance.</p>
+                    </div>
+
+                    <div class="pillar-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+                        <i class="fa-solid fa-clock-rotate-left text-4xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Reliable Response</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Fast response and reliable service to address hazard trees and urgent landscape maintenance needs.</p>
+                    </div>
+
+                    <div class="pillar-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+                        <i class="fa-solid fa-users-gear text-4xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Experienced Team</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Our professional and experienced team utilizes the latest arborist techniques to preserve landscape health.</p>
+                    </div>
                 </div>
+            </div>
+        </section>
+        
+        
+
+        <section class="py-20 bg-green-700 text-white text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h3 class="text-3xl font-bold mb-6">Safeguard Your Green Assets Today</h3>
+                <p class="text-green-100 mb-10 text-lg">Send us your enquiry anytime. We respond promptly to all professional tree care needs.</p>
+                <a href="contact.html" class="inline-block bg-white text-green-700 font-black px-12 py-4 rounded-xl hover:bg-gray-100 transition shadow-2xl uppercase tracking-widest text-sm">Consult an Arborist</a>
             </div>
         </section>
     </main>
-    
-    <footer class="bg-gray-900 text-white py-10 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
-            <p>&copy; 2024 GreenHaven Nursery. All rights reserved.</p>
-        </div>
+
+    <footer class="bg-gray-900 text-white py-12 text-center">
+        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">© 2025 TPS Corporate Pte Ltd. All Rights Reserved.</p>
     </footer>
-    
-    <a href="https://wa.me/1234567890" class="fixed bottom-10 right-4 md:right-10 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50">
-        <i class="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
-    
-    <script src="loader.js"></script> 
+
+    <script src="loader.js"></script>
 </body>
 </html>

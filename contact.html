@@ -3,94 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenHaven | Contact Us</title>
-    
+    <title>Contact | TPS Corporate Pte Ltd</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Poppins', sans-serif;
-            /* Explicitly setting padding-top to clear space for the fixed navbar */
-            padding-top: 5rem; 
-        }
+        body { font-family: 'Inter', sans-serif; padding-top: 5rem; }
+        .contact-gradient { background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); }
+        .form-input:focus { border-color: #16a34a; box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1); }
     </style>
 </head>
-
-<body class="text-gray-800 bg-gray-50 min-h-screen flex flex-col">
-
+<body class="bg-gray-50">
     <div id="navbar-placeholder"></div>
 
-    <main class="flex-grow">
-        <div class="bg-green-700 text-white py-24 text-center">
-            <h1 class="text-4xl font-extrabold">How Can We Help?</h1>
-            <p class="mt-2 text-green-100 text-lg">Send us a message or find us on the map below.</p>
-        </div>
-
-        <div class="pt-16 pb-20 max-w-7xl mx-auto px-4">
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white rounded-xl shadow-2xl overflow-hidden">
+    <main class="min-h-screen contact-gradient">
+        <section class="max-w-7xl mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
-                <div class="p-8 md:p-12">
-                    <h3 class="text-2xl font-bold mb-6 text-green-800">Send us a Query</h3>
-                    
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Your Name</label>
-                            <input type="text" name="name" required class="w-full border-gray-300 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50 transition duration-150">
+                <div class="space-y-10">
+                    <div class="space-y-4">
+                        <span class="text-green-600 font-black uppercase tracking-widest text-xs">Arborist Site Assessment</span>
+                        <h1 class="text-5xl font-black text-gray-900 leading-tight">Secure Your <br><span class="text-green-700">Green Sanctuary</span></h1>
+                        <p class="text-gray-600 text-lg max-w-md">Send us your enquiry anytime. Our ISA-certified team will respond promptly to your request.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Contact Person</p>
+                            <p class="text-lg font-bold text-gray-900">SELVA</p>
+                            <p class="text-xs text-green-600 font-bold uppercase">ISA-Certified Arborist</p>
                         </div>
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Email</label>
-                            <input type="email" name="_replyto" required class="w-full border-gray-300 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50 transition duration-150">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Direct Line</p>
+                            <p class="text-lg font-bold text-gray-900">+65 8854 2996</p>
                         </div>
-                        <div>
-                            <label class="block text-gray-700 font-medium mb-2">Message</label>
-                            <textarea name="message" rows="4" required class="w-full border-gray-300 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50 transition duration-150"></textarea>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 group">
+                            <div class="bg-green-700 text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-green-600 transition">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <span class="font-bold text-gray-700">tpscorporate2007@gmail.com</span>
                         </div>
-                        <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition shadow-lg">Send Message</button>
-                    </form>
+                        <div class="flex items-center gap-4 group">
+                            <div class="bg-green-700 text-white w-10 h-10 rounded-full flex items-center justify-center group-hover:bg-green-600 transition">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <span class="font-bold text-gray-700">www.tpscorporate.com</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-gray-200 grid grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <i class="fa-solid fa-bolt-lightning text-green-600 mb-2"></i>
+                            <p class="text-[10px] font-black uppercase text-gray-400">Fast Response</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa-solid fa-certificate text-green-600 mb-2"></i>
+                            <p class="text-[10px] font-black uppercase text-gray-400">ISA Certified</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa-solid fa-shield-check text-green-600 mb-2"></i>
+                            <p class="text-[10px] font-black uppercase text-gray-400">100% Secure</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-gray-100 p-8 md:p-12 flex flex-col">
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold mb-6 text-green-800">Our Details</h3>
-                        <p class="mb-4 flex items-center text-lg text-gray-700"><i class="fa-solid fa-location-dot text-green-600 w-8"></i> 123 Garden Street, Green City, Earth</p>
-                        <p class="mb-4 flex items-center text-lg text-gray-700"><i class="fa-solid fa-phone text-green-600 w-8"></i> +91 12345 67890</p>
-                        <p class="mb-4 flex items-center text-lg text-gray-700"><i class="fa-solid fa-envelope text-green-600 w-8"></i> hello@greenhaven.com</p>
-                        <a href="https://wa.me/1234567890?text=I have a quick query about your plants." class="inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition mt-4">
-                            <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Chat on WhatsApp
-                        </a>
-                    </div>
+                <div class="relative">
+                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
                     
-                    <div class="h-64 bg-gray-300 rounded-xl overflow-hidden relative flex-grow">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1522.6186982991666!2d78.47353909774659!3d17.43399450375765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc13203f7e1b5f7%3A0x62a1c0717208d085!2sGreen%20City!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                    <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100 relative z-10">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8">Request a Free Proposal</h3>
+                        
+                        <form action="https://formspree.io/f/tpscorporate2007@gmail.com" method="POST" class="space-y-5">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-black text-gray-400 uppercase ml-2">Full Name</label>
+                                    <input type="text" name="name" required class="form-input w-full bg-gray-50 border border-gray-100 p-4 rounded-xl outline-none transition" placeholder="Enter Name">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-black text-gray-400 uppercase ml-2">Email</label>
+                                    <input type="email" name="email" required class="form-input w-full bg-gray-50 border border-gray-100 p-4 rounded-xl outline-none transition" placeholder="Email Address">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-black text-gray-400 uppercase ml-2">Phone</label>
+                                    <input type="tel" name="phone" required class="form-input w-full bg-gray-50 border border-gray-100 p-4 rounded-xl outline-none transition" placeholder="+65">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-black text-gray-400 uppercase ml-2">Service Required</label>
+                                    <select name="service" class="form-input w-full bg-gray-50 border border-gray-100 p-4 rounded-xl outline-none transition text-gray-500">
+                                        <option>Tree Risk Assessment</option>
+                                        <option>Hazard Tree Removal</option>
+                                        <option>Professional Pruning</option>
+                                        <option>Landscape Advisory</option>
+                                        <option>Other Enquiry</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black text-gray-400 uppercase ml-2">Message</label>
+                                <textarea name="message" rows="4" required class="form-input w-full bg-gray-50 border border-gray-100 p-4 rounded-xl outline-none transition" placeholder="Describe your project requirements..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gray-900 text-white font-black py-5 rounded-2xl hover:bg-green-700 transition-all duration-300 uppercase tracking-[0.2em] text-sm shadow-xl">
+                                Send Enquiry
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2 overflow-hidden rounded-[2.5rem] shadow-xl group">
+                        <img src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?auto=format&fit=crop&w=1200&q=80" 
+                             class="w-full h-80 object-cover group-hover:scale-110 transition duration-700" alt="Arborist Site Assessment">
+                    </div>
+                    <div class="p-8 bg-green-50 rounded-[2.5rem] h-full flex flex-col justify-center shadow-inner">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4 tracking-tight">Rapid Response Guaranteed</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">Our arborist consultants are equipped with modern site evaluation tools to provide prompt and accurate reports. [cite: 30, 65]</p>
+                        
+                        <a href="https://wa.me/6588542996" class="flex items-center gap-2 text-green-700 font-black text-xs uppercase tracking-widest hover:text-green-600 transition-colors">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> 
+                            <span>Chat on WhatsApp →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
-    <footer class="bg-gray-900 text-white py-10 mt-auto text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>&copy; 2024 GreenHaven Nursery. All rights reserved.</p>
+
+    <footer class="bg-gray-900 text-white py-12 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-[10px] font-black text-gray-500 uppercase tracking-[0.3em] mb-4">© 2025 TPS Corporate Pte Ltd. All Rights Reserved.</p>
+            <div class="flex justify-center gap-6 text-gray-400 text-xl">
+                <i class="fa-brands fa-whatsapp hover:text-green-500 transition cursor-pointer"></i>
+                <i class="fa-solid fa-envelope hover:text-green-500 transition cursor-pointer"></i>
+            </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/1234567890" class="fixed bottom-10 right-4 md:right-10 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50">
-        <i class="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
-    
-    <script src="loader.js"></script> 
+    <script src="loader.js"></script>
 </body>
 </html>

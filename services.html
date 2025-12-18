@@ -3,124 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenHaven | Plant Services & Landscaping</title>
+    <title>Professional Arborist Services | TPS Corporate Pte Ltd</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Poppins', sans-serif;
-            /* Add padding to account for fixed navbar height */
-            padding-top: 5rem; 
-        }
-        .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); }
+        body { font-family: 'Inter', sans-serif; padding-top: 5rem; }
+        .service-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .service-card:hover { transform: translateY(-10px); }
+        .feature-icon { transition: transform 0.3s ease; }
+        .service-card:hover .feature-icon { transform: scale(1.1) rotate(5deg); }
     </style>
 </head>
-<body class="text-gray-800 bg-gray-50">
-
+<body class="bg-gray-50 text-gray-900">
     <div id="navbar-placeholder"></div>
-
-    <header class="bg-green-800 text-white pt-12 pb-12 text-center">
-        <h1 class="text-4xl font-bold">Expert Plant Services & Landscaping</h1>
-        <p class="mt-2 text-green-200">Solutions for thriving, beautiful outdoor and indoor spaces.</p>
-    </header>
-
-    <section class="py-16 max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-10 border-b-2 border-green-500 inline-block pb-1">Landscaping & Design</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-            
-            <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
-                <i class="fa-solid fa-drafting-compass text-4xl text-green-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-3">Custom Design</h3>
-                <p class="text-gray-600 mb-4">Full conceptual design, 3D renderings, and professional blueprint creation tailored to your budget.</p>
-                <a href="contact.html" class="text-green-600 font-semibold hover:text-green-800">Start Project →</a>
+    <main>
+        <header class="relative py-24 bg-gray-900 text-white overflow-hidden">
+            <div class="absolute inset-0 opacity-25">
+                <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="Background">
             </div>
-
-            <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
-                <i class="fa-solid fa-tree-city text-4xl text-green-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-3">Installation & Build</h3>
-                <p class="text-gray-600 mb-4">Expert execution of landscaping plans, including hardscaping (paths, walls) and softscaping (planting).</p>
-                <a href="contact.html" class="text-green-600 font-semibold hover:text-green-800">Request Quote →</a>
+            <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">Arborist & Tree Solutions</h1>
+                <p class="text-green-400 font-bold tracking-widest uppercase text-xs mb-8">Certified Tree Management for Singapore Landscapes</p>
+                <div class="w-24 h-1 bg-green-500 mx-auto"></div>
             </div>
+        </header>
 
-            <div class="service-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
-                <i class="fa-solid fa-water text-4xl text-green-600 mb-4"></i>
-                <h3 class="text-xl font-bold mb-3">Irrigation Systems</h3>
-                <p class="text-gray-600 mb-4">Installation of smart, water-efficient drip and sprinkler systems for effortless garden care.</p>
-                <a href="contact.html" class="text-green-600 font-semibold hover:text-green-800">Learn More →</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-10 border-b-2 border-green-500 inline-block pb-1">Garden Maintenance & Care</h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
+        <section class="max-w-7xl mx-auto px-6 py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-green-700">What's Included?</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>**Seasonal Pruning:** Ensuring optimal health and shape for all trees and shrubs.</div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>**Weed & Pest Control:** Using safe, organic solutions to protect your plants.</div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>**Soil & Fertilization:** Soil health testing and customized organic feeding programs.</div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-check-circle text-green-500 mt-1 mr-3"></i>
-                            <div>**Lawn Care:** Mowing, aeration, and overseeding for a lush, green turf.</div>
-                        </li>
-                    </ul>
+                <div class="service-card bg-white p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="feature-icon w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-8">
+                            <i class="fa-solid fa-file-invoice text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-6 text-gray-900 leading-tight">ISA-Certified<br>Consultation</h3>
+                        <p class="text-gray-500 mb-8 leading-relaxed">Expert assessments conducted by certified arborists to ensure the safety and longevity of your urban forest.</p>
+                        <ul class="space-y-4 text-sm font-semibold text-gray-700">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Tree Health Diagnosis</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Tree Risk Assessments</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Structural Stability Inspection</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Site Evaluation Reports</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Maintenance Planning</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-green-700">Maintenance Plans</h3>
-                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                        <div class="flex justify-between items-center border-b pb-3 mb-3">
-                            <span class="font-semibold">Basic Care (Monthly)</span>
-                            <span class="text-xl font-bold text-green-600">$199 / month</span>
+                <div class="service-card bg-white p-8 md:p-12 rounded-[2.5rem] shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="feature-icon w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-8">
+                            <i class="fa-solid fa-scissors text-3xl text-green-600"></i>
                         </div>
-                        <div class="flex justify-between items-center border-b pb-3 mb-3">
-                            <span class="font-semibold">Premium (Bi-Weekly)</span>
-                            <span class="text-xl font-bold text-green-600">$349 / month</span>
-                        </div>
-                        <div class="flex justify-between items-center pb-3">
-                            <span class="font-semibold">Full Service (Weekly)</span>
-                            <span class="text-xl font-bold text-green-600">$599 / month</span>
-                        </div>
-                        <a href="contact.html" class="block mt-4 text-center bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">Book A Free Consultation</a>
+                        <h3 class="text-3xl font-bold mb-6 text-gray-900 leading-tight">Professional<br>Tree Pruning</h3>
+                        <p class="text-gray-500 mb-8 leading-relaxed">Improving tree structure and safety through specialized pruning techniques tailored to specific tree species.</p>
+                        <ul class="space-y-4 text-sm font-semibold text-gray-700">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Crown Cleaning & Reduction</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Hazard Pruning</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Deadwood Removal</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Formative Pruning</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <div class="bg-green-100 py-12 text-center">
-        <h3 class="text-3xl font-bold mb-3 text-green-800">Ready to Transform Your Space?</h3>
-        <p class="text-gray-700 mb-6">Contact us today for a free site assessment and customized proposal.</p>
-        <a href="contact.html" class="bg-green-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-green-700 transition shadow-lg">Get Started Now</a>
-    </div>
+            <div class="mt-8 bg-white rounded-[2.5rem] shadow-sm border border-gray-100 overflow-hidden">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="lg:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover min-h-[400px]" alt="Landscape Tree Management">
+                    </div>
+                    <div class="lg:w-1/2 p-8 md:p-16 flex flex-col justify-center">
+                        <div class="feature-icon w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-8">
+                            <i class="fa-solid fa-tree-city text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-6">Landscape Tree Services</h3>
+                        <p class="text-gray-500 mb-8 leading-relaxed">Comprehensive tree management solutions designed for large-scale landscapes and diverse botanical environments.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="flex items-center gap-3 font-bold text-gray-800"><i class="fa-solid fa-shield-halved text-green-600"></i> Tree Care Programs</div>
+                            <div class="flex items-center gap-3 font-bold text-gray-800"><i class="fa-solid fa-eye text-green-600"></i> Monitoring & Inspections</div>
+                            <div class="flex items-center gap-3 font-bold text-gray-800"><i class="fa-solid fa-comments text-green-600"></i> Landscape Advisory</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <footer class="bg-gray-900 text-white py-10 mt-auto text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>© 2024 GreenHaven Nursery. All rights reserved.</p>
-        </div>
+            <div class="mt-8 bg-gray-900 rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden">
+                <div class="relative z-10 flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-2/3">
+                        <div class="w-16 h-16 bg-green-600/20 border border-green-500/30 rounded-2xl flex items-center justify-center mb-8">
+                            <i class="fa-solid fa-truck-pickup text-3xl text-green-400"></i>
+                        </div>
+                        <h3 class="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tight">Tree Cutting & Removal</h3>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-2xl">Safe and controlled removal performed by trained professionals in full compliance with safety standards.</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-[10px] font-black uppercase tracking-widest text-green-400">
+                            <div class="text-center bg-white/5 p-4 rounded-xl border border-white/10">Hazard Tree Removal</div>
+                            <div class="text-center bg-white/5 p-4 rounded-xl border border-white/10">Controlled Dismantling</div>
+                            <div class="text-center bg-white/5 p-4 rounded-xl border border-white/10">Site Clearing</div>
+                            <div class="text-center bg-white/5 p-4 rounded-xl border border-white/10">Safety Compliance</div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3 w-full text-center">
+                        <a href="contact.html" class="inline-block w-full py-6 bg-green-600 text-white rounded-2xl font-black text-sm uppercase tracking-[0.2em] hover:bg-green-700 transition-all shadow-2xl">Request Site Assessment</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-100 py-24">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h3 class="text-2xl font-bold mb-12 text-gray-800">Reliable Tree Care for Every Sector</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-white border border-gray-200 px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest text-gray-600">Residential Properties</span>
+                    <span class="bg-white border border-gray-200 px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest text-gray-600">Commercial & Industrial Estates</span>
+                    <span class="bg-white border border-gray-200 px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest text-gray-600">Government & Municipal</span>
+                    <span class="bg-white border border-gray-200 px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest text-gray-600">Landscape Companies</span>
+                    <span class="bg-white border border-gray-200 px-6 py-3 rounded-full text-xs font-black uppercase tracking-widest text-gray-600">Property Management</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12 text-center">
+        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">© 2025 TPS Corporate Pte Ltd. All Rights Reserved.</p>
     </footer>
-    
-    <a href="https://wa.me/1234567890" class="fixed bottom-10 right-10 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50">
-        <i class="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
-    
-    <script src="loader.js"></script>
 
+    <script src="loader.js"></script>
 </body>
 </html>

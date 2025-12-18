@@ -3,85 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenHaven | Premium Plants and Landscaping</title>
-    
+    <title>TPS Corporate | ISA-Certified Arborist & Tree Care</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Poppins', sans-serif; 
-        }
-        .hero-bg {
-            /* Increased darkness for better text readability */
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-overlay { background: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; }
+        .sector-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .sector-card:hover { transform: translateY(-8px); border-color: #16a34a; background-color: #f0fdf4; }
     </style>
 </head>
-
-<body class="bg-white min-h-screen flex flex-col pt-20"> 
-    
+<body class="bg-white pt-20">
     <div id="navbar-placeholder"></div>
-    
-    <main class="flex-grow">
-        <section class="hero-bg min-h-[calc(100vh-5rem)] flex items-center justify-center text-center px-4">
-            <div class="max-w-4xl text-white pt-10 pb-20">
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
-                    Nature at Your Doorstep
-                </h1>
-                <p class="text-lg md:text-xl mb-10 font-light drop-shadow">
-                    Premium plants and expert landscaping tailored for your sanctuary.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="shop.html" class="bg-green-600 text-white font-semibold py-3 px-10 rounded-full hover:bg-green-700 transition shadow-lg w-full sm:w-auto">
-                        Shop Our Collection
-                    </a>
-                    <a href="services.html" class="bg-white text-green-800 font-semibold py-3 px-10 rounded-full hover:bg-gray-100 transition shadow-lg w-full sm:w-auto border-2 border-green-600">
-                        Explore Services
-                    </a>
-                </div>
-            </div>
-        </section>
 
-        <section class="py-16 md:py-24 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Why Choose GreenHaven?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                        <i class="fa-solid fa-truck text-green-600 text-5xl mb-4"></i>
-                        <h3 class="text-xl font-bold mb-3 text-green-700">Fast & Safe Delivery</h3>
-                        <p class="text-gray-600">We deliver live plants safely to your doorstep, often within 24-48 hours, ensuring freshness.</p>
+    <header class="relative min-h-[85vh] flex items-center justify-center text-white overflow-hidden">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 max-w-5xl px-6 text-center">
+            <div class="inline-flex items-center space-x-2 bg-green-600/20 border border-green-500/50 px-4 py-1.5 rounded-full mb-6">
+                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                <span class="text-xs font-bold tracking-widest uppercase text-green-300">ISA-Certified Professional Arborist</span>
+            </div>
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">Professional Tree Care & <br><span class="text-green-400">Landscape Solutions</span></h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+                Creating safer, healthier, and better-managed landscapes through industry-leading arborist expertise in Singapore.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center font-bold">
+                <a href="services.html" class="bg-green-600 text-white py-4 px-10 rounded-xl hover:bg-green-700 transition shadow-2xl">Our Expertise</a>
+                <a href="contact.html" class="bg-white/10 backdrop-blur-md border border-white/20 text-white py-4 px-10 rounded-xl hover:bg-white/20 transition">Book Assessment</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4 uppercase tracking-tight">Reliable Certified Care</h2>
+            <p class="text-gray-500 mb-16 max-w-2xl mx-auto">We provide specialized arborist solutions tailored for diverse landscape requirements across Singapore.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="sector-card group p-8 rounded-3xl border border-gray-100 shadow-sm bg-gray-50 flex flex-col items-center justify-center">
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-inner flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
+                        <i class="fa-solid fa-house-user text-2xl text-green-600 group-hover:text-white"></i>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                        <i class="fa-solid fa-award text-green-600 text-5xl mb-4"></i>
-                        <h3 class="text-xl font-bold mb-3 text-green-700">Expert Landscape Design</h3>
-                        <p class="text-gray-600">Work with our certified landscape architects to create your perfect outdoor sanctuary.</p>
+                    <h3 class="font-bold text-gray-900 leading-snug">Residential<br>Properties</h3>
+                </div>
+
+                <div class="sector-card group p-8 rounded-3xl border border-gray-100 shadow-sm bg-gray-50 flex flex-col items-center justify-center">
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-inner flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
+                        <i class="fa-solid fa-building-shield text-2xl text-green-600 group-hover:text-white"></i>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
-                        <i class="fa-solid fa-hand-holding-droplet text-green-600 text-5xl mb-4"></i>
-                        <h3 class="text-xl font-bold mb-3 text-green-700">100% Organic Care</h3>
-                        <p class="text-gray-600">We commit to sustainability, using only organic fertilizers and non-toxic pest control.</p>
+                    <h3 class="font-bold text-gray-900 leading-snug">Commercial & Industrial</h3>
+                </div>
+
+                <div class="sector-card group p-8 rounded-3xl border border-gray-100 shadow-sm bg-gray-50 flex flex-col items-center justify-center">
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-inner flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
+                        <i class="fa-solid fa-landmark-flag text-2xl text-green-600 group-hover:text-white"></i>
                     </div>
+                    <h3 class="font-bold text-gray-900 leading-snug">Government & Municipal</h3>
+                </div>
+
+                <div class="sector-card group p-8 rounded-3xl border border-gray-100 shadow-sm bg-gray-50 flex flex-col items-center justify-center">
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-inner flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
+                        <i class="fa-solid fa-helmet-safety text-2xl text-green-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 leading-snug">Landscape Companies</h3>
+                </div>
+
+                <div class="sector-card group p-8 rounded-3xl border border-gray-100 shadow-sm bg-gray-50 flex flex-col items-center justify-center">
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-inner flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
+                        <i class="fa-solid fa-users-gear text-2xl text-green-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 leading-snug">Property Management</h3>
                 </div>
             </div>
-        </section>
-    </main>
-    
-    <footer class="bg-gray-900 text-white py-10 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
-            <p>&copy; 2024 GreenHaven Nursery. All rights reserved.</p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div>
+                    <h4 class="text-green-500 font-black text-4xl mb-4">Certified</h4>
+                    <h3 class="text-2xl font-bold mb-4">Expertise</h3>
+                    <p class="text-gray-400">ISA-certified consultants providing precise health diagnosis and risk assessments.</p>
+                </div>
+                <div>
+                    <h4 class="text-green-500 font-black text-4xl mb-4">Safety</h4>
+                    <h3 class="text-2xl font-bold mb-4">Operations</h3>
+                    <p class="text-gray-400">Strict safety standards for controlled dismantling and hazard tree removal.</p>
+                </div>
+                <div>
+                    <h4 class="text-green-500 font-black text-4xl mb-4">Transparent</h4>
+                    <h3 class="text-2xl font-bold mb-4">Reporting</h3>
+                    <p class="text-gray-400">Clear, professional reporting and fast response for all site evaluations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm">© 2025 TPS Corporate Pte Ltd. All Rights Reserved.</p>
+            <div class="mt-6 md:mt-0 flex space-x-8">
+                <a href="mailto:tpscorporate2007@gmail.com" class="text-gray-500 hover:text-white transition"><i class="fa-solid fa-envelope text-xl"></i></a>
+                <a href="https://wa.me/6588542996" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+            </div>
         </div>
     </footer>
-    
-    <a href="https://wa.me/1234567890" class="fixed bottom-10 right-4 md:right-10 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50">
+
+    <a href="https://wa.me/6588542996" class="fixed bottom-8 right-8 bg-green-500 text-white p-5 rounded-full shadow-2xl hover:bg-green-600 z-50 transition-all hover:scale-110">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
     </a>
 
-    <script src="loader.js"></script> 
+    <script src="loader.js"></script>
 </body>
 </html>
