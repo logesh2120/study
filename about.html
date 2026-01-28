@@ -6,109 +6,329 @@
     <title>About Us | TPS Corporate Pte Ltd</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; padding-top: 5rem; }
-        .pillar-card:hover i { transform: scale(1.2) rotate(5deg); transition: all 0.3s ease; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        /* Prevents elements from bleeding outside the viewport */
+        html { overflow-x: hidden; }
+        
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-8px); }
+        .green-gradient { background: linear-gradient(135deg, #047e3f 0%, #065f46 100%); }
+        
+        /* Smooth scale-in for the hero */
+        .hero-zoom { animation: heroZoom 12s infinite alternate; }
+        @keyframes heroZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900">
     <div id="navbar-placeholder"></div>
 
     <main>
-        <section class="relative py-24 bg-gray-900 overflow-hidden">
-            <div class="absolute inset-0 opacity-20">
-                <img src="images/about_bg.png" class="w-full h-full object-cover">
+        <section class="relative h-[60vh] flex items-center justify-center bg-gray-900 overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="images/about/about_bg.jpg" class="w-full h-full object-cover opacity-40 hero-zoom" alt="Nature Background">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent"></div>
             </div>
-            <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-4">Leading the Way in <br><span class="text-green-500">Urban Forestry</span></h1>
-                <p class="text-green-200 font-bold tracking-widest uppercase text-xs">Certified expertise across Singapore</p>
+            <div class="relative z-10 text-center px-4" data-aos="zoom-out" data-aos-duration="1500">
+                <p class="text-green-400 font-black uppercase tracking-[0.2em] text-xs md:text-sm mb-4">Established Excellence</p>
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none break-words">
+                    Engineering <br><span class="text-green-500">Urban Nature</span>
+                </h1>
             </div>
         </section>
 
-        <section class="py-24 max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                <div>
-                    <h2 class="text-sm font-black text-green-600 uppercase tracking-widest mb-4">The TPS Standard</h2>
-                    <h3 class="text-4xl font-bold text-gray-900 mb-8 leading-tight">Professional Tree Management Solutions </h3>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                        TPS Corporate Pte Ltd is a Singapore-based arborist company dedicated to delivering high-tier certified tree care and professional tree management.
+        <section class="py-16 md:py-24 max-w-7xl mx-auto px-6 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-green-600 font-extrabold uppercase tracking-widest text-sm mb-4">Who We Are</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">TPS Corporate Pte Ltd</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Singapore-based arborist company providing certified tree care, landscaping tree services, and professional tree management solutions.
+                        <br><br>Backed by <strong>ISA-certified</strong> arborists, we combine industry standards, safety practices, and expert knowledge to help clients protect their property and maintain healthy green environments.
                     </p>
-                    <p class="text-gray-600 leading-relaxed mb-10">
-                        Backed by ISA-certified arborists, we combine global industry standards with local safety practices. We empower property managers and residential owners with the expert knowledge needed to protect property value and maintain healthy green environments.
-                    </p>
-                    
-                    <div class="p-8 bg-gray-50 border-l-8 border-green-600 rounded-r-3xl">
-                        <h4 class="text-xs font-black text-gray-400 uppercase mb-2">Our Mission</h4>
-                        <p class="text-2xl font-semibold text-gray-800 italic leading-snug">
-                            "To deliver safe, reliable, and professional tree services that enhance landscapes and safeguard communities."
+                    <div class="bg-gray-50 p-6 md:p-8 rounded-2xl border-l-4 border-green-500 shadow-inner">
+                        <p class="text-lg md:text-xl italic text-gray-700 font-medium">
+                            "Our mission is to deliver safe, reliable, and professional tree services that enhance landscapes and safeguard communities."
                         </p>
                     </div>
                 </div>
-                
-                <div class="relative">
-                    <img src="images/about_bg_1.png" class="rounded-[3rem] shadow-2xl relative z-10" alt="Arborist at work">
-                    <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-green-100 rounded-full -z-0"></div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="absolute -inset-2 md:-inset-4 bg-green-500/10 rounded-[2.5rem] md:rounded-[3rem] blur-2xl"></div>
+                    <img src="images/about/arborist1.jpg" class="rounded-[2rem] md:rounded-[2.5rem] shadow-2xl relative z-10 w-full object-cover" alt="Arborist">
                 </div>
             </div>
         </section>
 
-        <section class="py-24 bg-gray-50">
+        <section class="py-20 bg-gray-900 text-white overflow-hidden">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 uppercase">Why Partner with Us?</h2>
-                    <p class="text-gray-500 mt-4">Setting the benchmark for tree care excellence.</p>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+                    <div class="max-w-2xl" data-aos="fade-up">
+                        <h2 class="text-green-500 font-black uppercase tracking-widest text-sm mb-4">Expertise 2025</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold">The Arborist Consultant</h3>
+                        <p class="text-gray-400 mt-4 text-lg">In 2025, we move beyond labor. We serve as your strategic technical experts, focusing on analysis, legal compliance, and long-term asset management.</p>
+                    </div>
+                    <a href="Technical.html" class="bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-full font-bold transition-all flex items-center gap-3 group" data-aos="fade-left">
+                        Explore Technical Services
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i>
+                    </a>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="pillar-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
-                        <i class="fa-solid fa-user-check text-4xl text-green-600 mb-6 block"></i>
-                        <h4 class="text-xl font-bold mb-3">Certified Consultants</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">Direct access to ISA-certified arborist consultants for specialized site evaluations and tree health diagnosis.</p>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="Technical.html#planning" class="glass-morphism p-8 rounded-3xl hover-lift group block" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-14 h-14 rounded-2xl bg-green-600/20 flex items-center justify-center mb-6 group-hover:bg-green-600 transition">
+                            <i class="fa-solid fa-compass-drafting text-2xl text-green-500 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Strategic Planning</h4>
+                        <p class="text-gray-400 text-sm mb-4">Tree Management Plans, AIA Assessments, and Climate-resilient species selection.</p>
+                        <span class="text-green-500 text-xs font-bold uppercase tracking-widest group-hover:underline">Learn More →</span>
+                    </a>
+                    <a href="Technical.html#legal" class="glass-morphism p-8 rounded-3xl hover-lift group block" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-14 h-14 rounded-2xl bg-green-600/20 flex items-center justify-center mb-6 group-hover:bg-green-600 transition">
+                            <i class="fa-solid fa-gavel text-2xl text-green-500 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Legal & Compliance</h4>
+                        <p class="text-gray-400 text-sm mb-4">Expert witness services, Risk assessments, and Permit application management.</p>
+                        <span class="text-green-500 text-xs font-bold uppercase tracking-widest group-hover:underline">Learn More →</span>
+                    </a>
+                    <a href="Technical.html#diagnosis" class="glass-morphism p-8 rounded-3xl hover-lift group block" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-14 h-14 rounded-2xl bg-green-600/20 flex items-center justify-center mb-6 group-hover:bg-green-600 transition">
+                            <i class="fa-solid fa-microscope text-2xl text-green-500 group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Tech Diagnosis</h4>
+                        <p class="text-gray-400 text-sm mb-4">Using LiDAR, GIS Mapping, and Ground-penetrating radar for deep health analysis.</p>
+                        <span class="text-green-500 text-xs font-bold uppercase tracking-widest group-hover:underline">Learn More →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-                    <div class="pillar-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
-                        <i class="fa-solid fa-hard-hat text-4xl text-green-600 mb-6 block"></i>
-                        <h4 class="text-xl font-bold mb-3">Safety Focused</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">Every operation is safety-focused, ensuring risk mitigation for high-traffic urban and industrial spaces.</p>
+        <section class="py-24 bg-white overflow-hidden">
+             <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-2xl md:text-3xl font-black mb-16" data-aos="fade-up">WHY YOU NEED A CONSULTING ARBORIST</h2>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+                    <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="text-4xl md:text-5xl font-black text-gray-100 mb-[-20px] md:mb-[-30px]">01</div>
+                        <h5 class="text-base md:text-lg font-bold text-gray-800 relative z-10">Inventories</h5>
+                        <p class="text-gray-500 text-xs mt-2 italic">"You can't manage what you don't know."</p>
                     </div>
-
-                    <div class="pillar-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
-                        <i class="fa-solid fa-file-invoice text-4xl text-green-600 mb-6 block"></i>
-                        <h4 class="text-xl font-bold mb-3">Transparent Reporting</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">Clear, detailed reporting and transparent service processes designed for corporate and government compliance.</p>
+                    <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="text-4xl md:text-5xl font-black text-gray-100 mb-[-20px] md:mb-[-30px]">02</div>
+                        <h5 class="text-base md:text-lg font-bold text-gray-800 relative z-10">Conservation</h5>
+                        <p class="text-gray-500 text-xs mt-2">Protecting assets during construction.</p>
                     </div>
-
-                    <div class="pillar-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
-                        <i class="fa-solid fa-clock-rotate-left text-4xl text-green-600 mb-6 block"></i>
-                        <h4 class="text-xl font-bold mb-3">Reliable Response</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">Fast response and reliable service to address hazard trees and urgent landscape maintenance needs.</p>
+                    <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="text-4xl md:text-5xl font-black text-gray-100 mb-[-20px] md:mb-[-30px]">03</div>
+                        <h5 class="text-base md:text-lg font-bold text-gray-800 relative z-10">Appraisals</h5>
+                        <p class="text-gray-500 text-xs mt-2">Objective valuation for insurance.</p>
                     </div>
+                    <div class="text-center" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="text-4xl md:text-5xl font-black text-gray-100 mb-[-20px] md:mb-[-30px]">04</div>
+                        <h5 class="text-base md:text-lg font-bold text-gray-800 relative z-10">Infrastructure</h5>
+                        <p class="text-gray-500 text-xs mt-2">Integrating green strategy.</p>
+                    </div>
+                </div>
+             </div>
+        </section>
 
-                    <div class="pillar-card bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
-                        <i class="fa-solid fa-users-gear text-4xl text-green-600 mb-6 block"></i>
-                        <h4 class="text-xl font-bold mb-3">Experienced Team</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">Our professional and experienced team utilizes the latest arborist techniques to preserve landscape health.</p>
+        <section class="py-24 bg-gray-50 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-green-600 font-extrabold uppercase tracking-widest text-sm mb-4">Core Capabilities</h2>
+                    <h3 class="text-3xl md:text-5xl font-black text-gray-900">Expert Advice & Technical Solutions</h3>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">Our ISA-certified consultants provide data-driven insights for complex arboricultural challenges.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-green-500 transition-all group" data-aos="fade-up">
+                        <i class="fa-solid fa-building-shield text-3xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Development & TPZ</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Management of Tree Protection Zones (TPZ) and retention strategies for development sites and council land.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-green-500 transition-all group" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-file-contract text-3xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Formal Reporting</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Written reports for council, dispute resolution, and expert witness services for legal proceedings.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-green-500 transition-all group" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-temperature-half text-3xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Advanced Diagnostics</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Thermal imaging, resistographs, and drone-assisted health assessments for structural integrity.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-green-500 transition-all group" data-aos="fade-up">
+                        <i class="fa-solid fa-tree-city text-3xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Urban Planning</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Blue/green infrastructure strategies and "Right Tree, Right Place" consultation for long-term growth.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-green-500 transition-all group" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-seedling text-3xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Specialized Management</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Weed species management, tree transplantation, and care for "Significant" or Heritage trees.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-green-500 transition-all group" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-scale-balanced text-3xl text-green-600 mb-6 block"></i>
+                        <h4 class="text-xl font-bold mb-3">Risk & Appraisal</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Objective monetary appraisals using CTLA standards for insurance and real estate transactions.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        
 
-        <section class="py-20 bg-green-700 text-white text-center">
-            <div class="max-w-3xl mx-auto px-6">
-                <h3 class="text-3xl font-bold mb-6">Safeguard Your Green Assets Today</h3>
-                <p class="text-green-100 mb-10 text-lg">Send us your enquiry anytime. We respond promptly to all professional tree care needs.</p>
-                <a href="contact.html" class="inline-block bg-white text-green-700 font-black px-12 py-4 rounded-xl hover:bg-gray-100 transition shadow-2xl uppercase tracking-widest text-sm">Consult an Arborist</a>
+        <section class="py-24 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-green-600 font-extrabold uppercase tracking-widest text-sm mb-4">The Strategic Value</h2>
+                    <h3 class="text-3xl md:text-5xl font-black text-gray-900">When is a Consulting Arborist Essential?</h3>
+                    <p class="text-gray-600 mt-4 max-w-3xl mx-auto">There are many situations where expert services are not just helpful—they’re essential for safety, legal compliance, and asset protection.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-8" data-aos="fade-right">
+                        <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-md transition-all">
+                            <div class="flex gap-4 mb-3">
+                                <span class="text-2xl font-black text-green-600">01</span>
+                                <h4 class="text-xl font-bold">Inventories & Assessments</h4>
+                            </div>
+                            <p class="text-gray-500 italic mb-3 text-sm">“You can’t manage what you don’t know.”</p>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                We perform full inventories for municipalities, schools, and corporate campuses to understand species health and environmental value.
+                            </p>
+                            <div class="bg-white p-3 rounded-lg border-l-2 border-green-500 text-xs text-gray-500">
+                                <strong>Note:</strong> Accurate tree surveys are critical for development; inaccuracies can delay projects.
+                            </div>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-md transition-all">
+                            <div class="flex gap-4 mb-3">
+                                <span class="text-2xl font-black text-green-600">02</span>
+                                <h4 class="text-xl font-bold">Tree Management Plans</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Strategies based on health data and invasive pest threats. We collaborate with architects for long-term care guidance.
+                            </p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-md transition-all">
+                            <div class="flex gap-4 mb-3">
+                                <span class="text-2xl font-black text-green-600">03</span>
+                                <h4 class="text-xl font-bold">Construction Conservation</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Involving us early protects roots and canopies during remodels. We provide site inspections to avoid costly structural mistakes.
+                            </p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-md transition-all">
+                            <div class="flex gap-4 mb-3">
+                                <span class="text-2xl font-black text-green-600">04</span>
+                                <h4 class="text-xl font-bold">Planting & Infrastructure</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-2">
+                                “Right Tree, Right Place.” We work with Engineers on green strategies for storm water and soil volumes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8" data-aos="fade-left">
+                        <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-md transition-all">
+                            <div class="flex gap-4 mb-3">
+                                <span class="text-2xl font-black text-green-600">05</span>
+                                <h4 class="text-xl font-bold">Diagnosing Health Issues</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Identifying fungal infections and structural cracks. We use advanced tools like <strong>resistographs and drones</strong>.
+                            </p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-md transition-all">
+                            <div class="flex gap-4 mb-3">
+                                <span class="text-2xl font-black text-green-600">06</span>
+                                <h4 class="text-xl font-bold">Tree Appraisals</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Objective monetary valuation for insurance claims or legal disputes using <strong>CTLA industry standards</strong>.
+                            </p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-md transition-all">
+                            <div class="flex gap-4 mb-3">
+                                <span class="text-2xl font-black text-green-600">07</span>
+                                <h4 class="text-xl font-bold">Legal & Expert Witness</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Science-backed evidence for cases involving ownership disputes. We provide written reports suitable for litigation.
+                            </p>
+                        </div>
+
+                        <div class="mt-8 bg-gray-900 rounded-[2rem] p-8 md:p-10 text-white relative shadow-2xl overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-green-500/10 rounded-full -mr-8 -mt-8"></div>
+                            <i class="fa-solid fa-quote-left text-green-500 text-3xl mb-6"></i>
+                            <p class="text-lg md:text-xl leading-relaxed mb-6 relative z-10">
+                                "Trees are long-term investments—having the right expert on your team ensures risks are minimized."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-1 bg-green-500"></div>
+                                <span class="uppercase tracking-widest text-xs font-bold">TPS Corporate Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-24 green-gradient overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <filter id="n">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" />
+                    </filter>
+                    <rect width="100%" height="100%" filter="url(#n)" />
+                </svg>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+                <div class="inline-block mb-6 px-4 py-1 border border-green-400/30 rounded-full bg-green-400/10" data-aos="fade-down">
+                    <span class="text-green-400 text-xs font-bold uppercase tracking-[0.2em]">Partner with Experts</span>
+                </div>
+                
+                <h3 class="text-3xl md:text-5xl font-black mb-6 text-white tracking-tight" data-aos="fade-up">
+                    Ready to Safeguard Your <br><span class="italic font-light">Green Assets?</span>
+                </h3>
+                
+                <p class="text-gray-300 mb-10 text-lg max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                    Our ISA-certified consultants provide the high-level technical oversight and risk mitigation your property deserves.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="contact.html" class="bg-green-500 hover:bg-green-400 text-gray-900 font-black px-8 md:px-12 py-4 rounded-xl transition-all shadow-xl hover:-translate-y-1 uppercase text-sm tracking-widest">
+                        Book a Consultation
+                    </a>
+                    <a href="services.html" class="bg-transparent border border-white/20 hover:border-white/60 text-white font-bold px-8 md:px-12 py-4 rounded-xl transition-all uppercase text-sm tracking-widest">
+                        View All Services
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-white py-12 text-center">
-        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">© 2025 TPS Corporate Pte Ltd. All Rights Reserved.</p>
-    </footer>
+    <div id="footer-placeholder"></div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 400,
+            once: true,
+            easing: 'ease-in-out'
+        });
+    </script>
     <script src="loader.js"></script>
 </body>
 </html>

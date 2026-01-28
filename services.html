@@ -13,6 +13,11 @@
         .service-card:hover { transform: translateY(-10px); }
         .feature-icon { transition: transform 0.3s ease; }
         .service-card:hover .feature-icon { transform: scale(1.1) rotate(5deg); }
+        .project-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .project-card:hover { transform: translateY(-10px); }
+        .image-zoom { overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; }
+        .image-zoom img { transition: transform 0.6s ease; }
+        .project-card:hover img { transform: scale(1.1); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -20,7 +25,7 @@
     <main>
         <header class="relative py-24 bg-gray-900 text-white overflow-hidden">
             <div class="absolute inset-0 opacity-25">
-                <img src="images/services_bg.png" class="w-full h-full object-cover" alt="Background">
+                <img src="images/service/services_bg.png" class="w-full h-full object-cover" alt="Background">
             </div>
             <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">Arborist & Tree Solutions</h1>
@@ -69,7 +74,7 @@
             <div class="mt-8 bg-white rounded-[2.5rem] shadow-sm border border-gray-100 overflow-hidden">
                 <div class="flex flex-col lg:flex-row">
                     <div class="lg:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover min-h-[400px]" alt="Landscape Tree Management">
+                        <img src="images/service/landscape.png" class="w-full h-full object-cover min-h-[400px]" alt="Landscape Tree Management">
                     </div>
                     <div class="lg:w-1/2 p-8 md:p-16 flex flex-col justify-center">
                         <div class="feature-icon w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-8">
@@ -107,8 +112,72 @@
                 </div>
             </div>
         </section>
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="project-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div class="image-zoom h-64">
+                        <img src="images/service/tree_transplant.png" alt="Large tree pipe jacking" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <span class="text-green-600 font-black uppercase text-[10px] tracking-widest mb-2 block">Engineering Method</span>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 leading-tight">Pipe Jacking Transplant</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Execution of large-scale tree transplanting using the advanced pipe jacking method for mature trees.</p>
+                        <a href="contact.html" class="text-green-700 font-bold text-xs uppercase tracking-widest hover:underline">Request Assessment →</a>
+                    </div>
+                </div>
 
-        <section class="bg-gray-100 py-24">
+                <div class="project-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div class="image-zoom h-64">
+                        <img src="images/service/burlap.png" alt="Burlap root protection" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <span class="text-green-600 font-black uppercase text-[10px] tracking-widest mb-2 block">Landscape Care</span>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 leading-tight">Burlap Root Management</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Professional burlap transplanting method used to protect root balls during site transitions.</p>
+                        <a href="contact.html" class="text-green-700 font-bold text-xs uppercase tracking-widest hover:underline">Request Assessment →</a>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div class="image-zoom h-64">
+                        <img src="images/service/inspection.jpg" alt="Tree health diagnostic" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <span class="text-green-600 font-black uppercase text-[10px] tracking-widest mb-2 block">ISA Consultation</span>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 leading-tight">Structural Inspection</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Certified arborists conducting health diagnosis and tree risk assessments for safer landscapes.</p>
+                        <a href="contact.html" class="text-green-700 font-bold text-xs uppercase tracking-widest hover:underline">Request Assessment →</a>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden lg:col-span-2">
+                    <div class="flex flex-col md:flex-row h-full">
+                        <div class="md:w-1/2 image-zoom">
+                            <img src="images/service/tree_remove.jpg" class="w-full h-full object-cover" alt="Tree removal crane">
+                        </div>
+                        <div class="md:w-1/2 p-10 flex flex-col justify-center">
+                            <span class="text-red-600 font-black uppercase text-[10px] tracking-widest mb-2 block">Safety Operations</span>
+                            <h3 class="text-3xl font-bold mb-4">Hazard Removal</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-6">Controlled dismantling and removal of hazard trees in compliance with strict safety standards.</p>
+                            <div class="flex gap-4">
+                                <span class="bg-gray-100 px-3 py-1 rounded-md text-[10px] font-bold text-gray-500 uppercase tracking-tighter">Site Clearing</span>
+                                <span class="bg-gray-100 px-3 py-1 rounded-md text-[10px] font-bold text-gray-500 uppercase tracking-tighter">Safe Dismantling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-green-700 rounded-3xl p-10 flex flex-col justify-center text-white">
+                    <h3 class="text-2xl font-bold mb-4 leading-tight">Safeguard Your Communities</h3>
+                    <p class="text-green-100 text-sm mb-8 leading-relaxed">Delivering reliable, professional tree services to enhance and safeguard Singapore's environments.</p>
+                    <a href="contact.html" class="bg-white text-green-700 text-center py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-gray-100 transition shadow-xl">Contact Consultant</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-green-200 py-24">
             <div class="max-w-7xl mx-auto px-6 text-center">
                 <h3 class="text-2xl font-bold mb-12 text-gray-800">Reliable Tree Care for Every Sector</h3>
                 <div class="flex flex-wrap justify-center gap-4">
@@ -120,11 +189,60 @@
                 </div>
             </div>
         </section>
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="text-green-600 font-black uppercase tracking-[0.3em] text-xs mb-4">The TPS Advantage</p>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter uppercase">Why Choose Us</h2>
+                    <div class="w-16 h-1 bg-green-500 mx-auto mt-6"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="group p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:bg-white hover:shadow-xl hover:shadow-green-900/5 transition-all duration-300">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors duration-300">
+                            <i class="fa-solid fa-certificate text-green-600 group-hover:text-white text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 leading-tight mb-2">ISA-Certified Arborists</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Expert consultation from certified industry leaders.</p>
+                    </div>
+
+                    <div class="group p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:bg-white hover:shadow-xl hover:shadow-green-900/5 transition-all duration-300">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors duration-300">
+                            <i class="fa-solid fa-helmet-safety text-green-600 group-hover:text-white text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 leading-tight mb-2">Safety-Focused Operations</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Rigorous safety protocols for every site engagement.</p>
+                    </div>
+
+                    <div class="group p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:bg-white hover:shadow-xl hover:shadow-green-900/5 transition-all duration-300">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors duration-300">
+                            <i class="fa-solid fa-users-gear text-green-600 group-hover:text-white text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 leading-tight mb-2">Professional Experience</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">A highly trained team with years of field expertise.</p>
+                    </div>
+
+                    <div class="group p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:bg-white hover:shadow-xl hover:shadow-green-900/5 transition-all duration-300">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors duration-300">
+                            <i class="fa-solid fa-clipboard-check text-green-600 group-hover:text-white text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 leading-tight mb-2">Transparent Reporting</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Clear documentation and honest service delivery.</p>
+                    </div>
+
+                    <div class="group p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:bg-white hover:shadow-xl hover:shadow-green-900/5 transition-all duration-300">
+                        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors duration-300">
+                            <i class="fa-solid fa-bolt text-green-600 group-hover:text-white text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 leading-tight mb-2">Fast & Reliable Response</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Quick turnaround times for urgent assessments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-gray-900 text-white py-12 text-center">
-        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">© 2025 TPS Corporate Pte Ltd. All Rights Reserved.</p>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script src="loader.js"></script>
 </body>

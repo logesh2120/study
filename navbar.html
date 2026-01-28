@@ -1,34 +1,53 @@
-<nav class="bg-white shadow-md fixed w-full z-50 top-0 border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <img src="images/logo.jpg" alt="TPS Corporate Logo" class="h-12 w-auto object-contain transition-transform group-hover:scale-105">
-                
-                <div class="flex flex-col leading-tight">
-                    <span class="text-green-800 text-xl md:text-2xl font-black tracking-tighter uppercase">TPS Corporate</span>
-                    <span class="text-gray-500 text-[10px] md:text-xs font-semibold tracking-widest uppercase">Certified Arborist Services</span>
-                </div>
-            </a>
-
-            <div class="hidden md:flex space-x-6 lg:space-x-8 items-center text-sm">
-                <a href="index.html" class="text-gray-600 hover:text-green-700 font-semibold transition nav-link" data-page="index">Home</a>
-                <a href="about.html" class="text-gray-600 hover:text-green-700 font-semibold transition nav-link" data-page="about">About Us</a>
-                <a href="services.html" class="text-gray-600 hover:text-green-700 font-semibold transition nav-link" data-page="services">Services</a>
-                <a href="gallery.html" class="text-gray-600 hover:text-green-700 font-semibold transition nav-link" data-page="gallery">Project Gallery</a>
-                <a href="contact.html" class="bg-green-700 text-white px-6 py-2.5 rounded-lg hover:bg-green-800 transition font-bold shadow-md nav-link" data-page="contact">Contact Consultant</a>
+<header class="fixed w-full z-50 top-0 left-0 shadow-md">
+    
+    <div class="bg-green-900 text-white py-2 border-b border-green-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-[10px] md:text-xs font-bold tracking-widest uppercase">
+            <div class="flex gap-4 md:gap-8">
+                <a href="tel:+6588542996" class="flex items-center gap-2 hover:text-green-300 transition">
+                    <i class="fa-solid fa-phone"></i> +65 8854 2996
+                </a>
+                <a href="mailto:tpscorporate2007@gmail.com" class="hidden sm:flex items-center gap-2 hover:text-green-300 transition">
+                    <i class="fa-solid fa-envelope"></i> tpscorporate2007@gmail.com
+                </a>
             </div>
-
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 p-2 focus:outline-none">
-                <i class="fa-solid fa-bars-staggered text-2xl"></i>
-            </button>
+            <div class="flex items-center gap-2">
+                <span class="text-green-400"><i class="fa-solid fa-certificate"></i></span>
+                ISA-Certified Arborist: Selva
+            </div>
         </div>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200">
-        <a href="index.html" class="block py-4 px-6 text-gray-700 font-medium border-b border-gray-100 nav-link-mobile" data-page="index">Home</a>
-        <a href="about.html" class="block py-4 px-6 text-gray-700 font-medium border-b border-gray-100 nav-link-mobile" data-page="about">About Us</a>
-        <a href="services.html" class="block py-4 px-6 text-gray-700 font-medium border-b border-gray-100 nav-link-mobile" data-page="services">Services</a>
-        <a href="gallery.html" class="block py-4 px-6 text-gray-700 font-medium border-b border-gray-100 nav-link-mobile" data-page="gallery">Project Gallery</a>
-        <a href="contact.html" class="block py-4 px-6 bg-green-700 text-white font-bold nav-link-mobile" data-page="contact">Contact Us</a>
-    </div>
-</nav>
+    <nav class="bg-white w-full border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="images/logo.jpg" alt="TPS Corporate Logo" class="h-12 w-auto object-contain transition-transform group-hover:scale-105">
+                    <div class="flex flex-col leading-tight">
+                        <span class="text-green-800 text-xl md:text-2xl font-black tracking-tighter uppercase">TPS Corporate</span>
+                        <span class="text-gray-500 text-[10px] md:text-xs font-semibold tracking-widest uppercase">Certified Arborist Services</span>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center text-sm">
+                    <a href="index.html" class="text-gray-600 hover:text-green-700 font-semibold transition nav-link" data-page="index">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-green-700 font-semibold transition nav-link" data-page="about">About Us</a>
+                    <a href="services.html" class="text-gray-600 hover:text-green-700 font-semibold transition nav-link" data-page="services">Services</a>
+                    <a href="gallery.html" class="text-gray-600 hover:text-green-700 font-semibold transition nav-link" data-page="gallery">Project Gallery</a>
+                    <a href="contact.html" class="bg-green-700 text-white px-6 py-2.5 rounded-lg hover:bg-green-800 transition font-bold shadow-md nav-link" data-page="contact">Contact Consultant</a>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 p-2">
+                    <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200">
+            <a href="index.html" class="block py-4 px-6 text-gray-700 font-medium border-b border-gray-100 nav-link-mobile" data-page="index">Home</a>
+            <a href="about.html" class="block py-4 px-6 text-gray-700 font-medium border-b border-gray-100 nav-link-mobile" data-page="about">About Us</a>
+            <a href="services.html" class="block py-4 px-6 text-gray-700 font-medium border-b border-gray-100 nav-link-mobile" data-page="services">Services</a>
+            <a href="gallery.html" class="block py-4 px-6 text-gray-700 font-medium border-b border-gray-100 nav-link-mobile" data-page="gallery">Project Gallery</a>
+            <a href="contact.html" class="block py-4 px-6 bg-green-700 text-white font-bold nav-link-mobile" data-page="contact">Contact Us</a>
+        </div>
+    </nav>
+</header>

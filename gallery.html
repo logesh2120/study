@@ -7,21 +7,85 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
     <style>
         body { font-family: 'Inter', sans-serif; padding-top: 5rem; }
-        .project-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        .project-card:hover { transform: translateY(-10px); }
-        .image-zoom { overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; }
-        .image-zoom img { transition: transform 0.6s ease; }
-        .project-card:hover img { transform: scale(1.1); }
-        
-        /* Forest Background Header Overlay */
         .portfolio-hero {
             position: relative;
-            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('images/gallery_bg.png');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('images/gallery/gallery_bg.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+        }
+
+        /* Image Hover & Quality */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            transition: all 0.5s ease;
+            display: block;
+        }
+        .gallery-item:hover img {
+            filter: brightness(60%);
+            transform: scale(1.08);
+        }
+
+        /* Swiper Container Layout */
+        .swiper-container-wrapper {
+            position: relative;
+            padding: 0 60px; /* Padding for desktop arrows */
+        }
+
+        /* General Arrow Styling */
+        .swiper-button-next, .swiper-button-prev {
+            color: #16a34a !important;
+            background: white;
+            width: 44px !important;
+            height: 44px !important;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 30;
+        }
+
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 1.1rem !important;
+            font-weight: 800;
+        }
+
+        /* Navigation Positioning */
+        .swiper-button-prev { left: 0px !important; }
+        .swiper-button-next { right: 0px !important; }
+
+        /* Mobile Optimization for Arrows & Spacing */
+        @media (max-width: 768px) {
+            .swiper-container-wrapper { padding: 0 10px; } /* Tighten padding for mobile */
+            
+            /* Move arrows INSIDE the view so they don't clip off screen */
+            .swiper-button-prev { left: 15px !important; }
+            .swiper-button-next { right: 15px !important; }
+
+            .swiper-button-next, .swiper-button-prev {
+                width: 40px !important;
+                height: 40px !important;
+                background: rgba(255, 255, 255, 0.95); /* High contrast */
+                box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            }
+        }
+
+        /* Pagination Dots */
+        .swiper-pagination-bullet-active {
+            background: #16a34a !important;
+            width: 20px;
+            border-radius: 4px;
+            transition: width 0.3s ease;
         }
     </style>
 </head>
@@ -40,77 +104,140 @@
         </header>
 
         <section class="max-w-7xl mx-auto px-6 py-20">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
-                <div class="project-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-                    <div class="image-zoom h-64">
-                        <img src="images/gallery/tree_transplant.png" alt="Large tree pipe jacking" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <span class="text-green-600 font-black uppercase text-[10px] tracking-widest mb-2 block">Engineering Method</span>
-                        <h3 class="text-2xl font-bold mb-3 text-gray-900 leading-tight">Pipe Jacking Transplant</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Execution of large-scale tree transplanting using the advanced pipe jacking method for mature trees.</p>
-                        <a href="contact.html" class="text-green-700 font-bold text-xs uppercase tracking-widest hover:underline">Request Assessment →</a>
-                    </div>
-                </div>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-gray-900 uppercase tracking-tight">Consulting</h2>
+                <div class="w-16 h-1.5 bg-green-500 mx-auto mt-4"></div>
+            </div>
 
-                <div class="project-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-                    <div class="image-zoom h-64">
-                        <img src="images/gallery/burlap.png" alt="Burlap root protection" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <span class="text-green-600 font-black uppercase text-[10px] tracking-widest mb-2 block">Landscape Care</span>
-                        <h3 class="text-2xl font-bold mb-3 text-gray-900 leading-tight">Burlap Root Management</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Professional burlap transplanting method used to protect root balls during site transitions.</p>
-                        <a href="contact.html" class="text-green-700 font-bold text-xs uppercase tracking-widest hover:underline">Request Assessment →</a>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-                    <div class="image-zoom h-64">
-                        <img src="images/gallery/inspection.jpg" alt="Tree health diagnostic" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <span class="text-green-600 font-black uppercase text-[10px] tracking-widest mb-2 block">ISA Consultation</span>
-                        <h3 class="text-2xl font-bold mb-3 text-gray-900 leading-tight">Structural Inspection</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Certified arborists conducting health diagnosis and tree risk assessments for safer landscapes.</p>
-                        <a href="contact.html" class="text-green-700 font-bold text-xs uppercase tracking-widest hover:underline">Request Assessment →</a>
-                    </div>
-                </div>
-
-                <div class="project-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden lg:col-span-2">
-                    <div class="flex flex-col md:flex-row h-full">
-                        <div class="md:w-1/2 image-zoom">
-                            <img src="images/gallery/tree_remove.jpg" class="w-full h-full object-cover" alt="Tree removal crane">
+            <div class="swiper-container-wrapper">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide h-auto pb-14">
+                            <div class="bg-white shadow-sm border border-gray-100 overflow-hidden h-full flex flex-col">
+                                <a href="images/gallery/consulting/tree_risk_assessment.jpg" data-fancybox="consulting" data-caption="Tree Risk Assessment (TRA)">
+                                    <div class="gallery-item h-64">
+                                        <img src="images/gallery/consulting/tree_risk_assessment.jpg" class="w-full h-full object-cover" alt="Tree Risk Assessment">
+                                    </div>
+                                </a>
+                                <div class="p-8 flex-grow">
+                                    <h3 class="text-xl font-extrabold mb-3 uppercase tracking-tight">Tree Risk Assessment</h3>
+                                    <p class="text-gray-500 text-sm leading-relaxed">A tree inventory is a comprehensive, data-driven inventory of all the trees on a property or in a specific area. Detailing key information about each tree, including species, size, location, condition, and maintenance needs.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="md:w-1/2 p-10 flex flex-col justify-center">
-                            <span class="text-red-600 font-black uppercase text-[10px] tracking-widest mb-2 block">Safety Operations</span>
-                            <h3 class="text-3xl font-bold mb-4">Hazard Removal</h3>
-                            <p class="text-gray-500 text-sm leading-relaxed mb-6">Controlled dismantling and removal of hazard trees in compliance with strict safety standards.</p>
-                            <div class="flex gap-4">
-                                <span class="bg-gray-100 px-3 py-1 rounded-md text-[10px] font-bold text-gray-500 uppercase tracking-tighter">Site Clearing</span>
-                                <span class="bg-gray-100 px-3 py-1 rounded-md text-[10px] font-bold text-gray-500 uppercase tracking-tighter">Safe Dismantling</span>
+
+                        <div class="swiper-slide h-auto pb-14">
+                            <div class="bg-white shadow-sm border border-gray-100 overflow-hidden h-full flex flex-col">
+                                <a href="images/gallery/consulting/tree_inventories.jpg" data-fancybox="consulting" data-caption="Tree Inventories & Surveys">
+                                    <div class="gallery-item h-64">
+                                        <img src="images/gallery/consulting/tree_inventories.jpg" class="w-full h-full object-cover" alt="Tree Inventories">
+                                    </div>
+                                </a>
+                                <div class="p-8 flex-grow">
+                                    <h3 class="text-xl font-extrabold mb-3 uppercase tracking-tight">Tree Inventories & Surveys</h3>
+                                    <p class="text-gray-500 text-sm leading-relaxed">Certified consulting arborists assist in cases involving:Property damage from fallen trees or limbs.Personal injury due to unsafe conditions.Tree ownership and boundary disputes.Tree removal or negligence claims.Insurance claims and valuation disputes.Land use, zoning, and preservation conflicts.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto pb-14">
+                            <div class="bg-white shadow-sm border border-gray-100 overflow-hidden h-full flex flex-col">
+                                <a href="images/gallery/consulting/consulting_arborist.jpg" data-fancybox="consulting" data-caption="Engineering & Protection">
+                                    <div class="gallery-item h-64">
+                                        <img src="images/gallery/consulting/consulting_arborist.jpg" class="w-full h-full object-cover" alt="Protection">
+                                    </div>
+                                </a>
+                                <div class="p-8 flex-grow">
+                                    <h3 class="text-xl font-extrabold mb-3 uppercase tracking-tight">ISA Certified and Registered Consulting Arborist</h3>
+                                    <p class="text-gray-500 text-sm leading-relaxed">Storm damage, personal injury, or code compliance issues, expert testimony can make or break a case.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-
-                <div class="bg-green-700 rounded-3xl p-10 flex flex-col justify-center text-white">
-                    <h3 class="text-2xl font-bold mb-4 leading-tight">Safeguard Your Communities</h3>
-                    <p class="text-green-100 text-sm mb-8 leading-relaxed">Delivering reliable, professional tree services to enhance and safeguard Singapore's environments.</p>
-                    <a href="contact.html" class="bg-white text-green-700 text-center py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-gray-100 transition shadow-xl">Contact Consultant</a>
-                </div>
-
             </div>
         </section>
-        
-        
+
+        <section class="max-w-7xl mx-auto px-6 py-12 mb-20">
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="services.html" class="group relative overflow-hidden bg-white border border-gray-200 p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-leaf text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase tracking-tight mb-2">Our Services</h3>
+                        <p class="text-gray-500 mb-6">Explore our full range of certified arboriculture and tree management solutions.</p>
+                        <span class="text-green-600 font-bold uppercase text-xs tracking-widest flex items-center">
+                            Browse Services <i class="fa-solid fa-chevron-right ml-2 group-hover:ml-4 transition-all"></i>
+                        </span>
+                    </div>
+                    <i class="fa-solid fa-tree absolute -bottom-10 -right-10 text-gray-50 text-9xl opacity-50 group-hover:opacity-100 transition-opacity"></i>
+                </a>
+
+                <a href="contact.html" class="group relative overflow-hidden bg-green-600 p-10 rounded-3xl shadow-lg hover:shadow-green-200/50 transition-all duration-300">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-white/20 text-white rounded-full flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-green-600 transition-colors duration-300">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase tracking-tight mb-2 text-white">Get In Touch</h3>
+                        <p class="text-green-100 mb-6">Have a project in mind? Contact our experts for a professional consultation.</p>
+                        <span class="text-white font-bold uppercase text-xs tracking-widest flex items-center">
+                            Contact Us Now <i class="fa-solid fa-chevron-right ml-2 group-hover:ml-4 transition-all"></i>
+                        </span>
+                    </div>
+                    <i class="fa-solid fa-comment-dots absolute -bottom-10 -right-10 text-white/10 text-9xl"></i>
+                </a>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-gray-900 text-white py-12 text-center">
-        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">© 2025 TPS Corporate Pte Ltd. All Rights Reserved.</p>
-    </footer>
+    <div id="footer-placeholder"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true, // Shows a "hand" icon to indicate dragging is possible
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: { 
+                    slidesPerView: 2, 
+                    spaceBetween: 30 
+                },
+                1024: { 
+                    slidesPerView: 3, 
+                    spaceBetween: 30 
+                }
+            }
+        });
+
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            Toolbar: {
+                display: {
+                    left: ["infobar"],
+                    middle: [],
+                    right: ["iterateZoom", "close"],
+                },
+            },
+        });
+    </script>
     <script src="loader.js"></script>
 </body>
 </html>

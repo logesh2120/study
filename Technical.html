@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulting Services | TPS Corporate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b1110; color: white; }
+        
+        /* Smooth scrolling for anchor links */
+        html { scroll-behavior: smooth; }
+
+        .gradient-text {
+    background: linear-gradient(90deg, #10b981, #34d399);
+    -webkit-background-clip: text; /* For Safari/Chrome */
+    background-clip: text;         /* Standard property - ADD THIS */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+        /* Glassmorphism Sections */
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile Sticky Nav */
+        .mobile-nav {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            background: rgba(16, 185, 129, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 999px;
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        /* Active Sidebar Link Highlight */
+        .sidebar-link.active {
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+            border-right: 3px solid #10b981;
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar-link.active {
+                border-right: none;
+                border-bottom: 3px solid #10b981;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <header class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(15,23,21,0.7), #0b1110), url('images/sample/bg1.jpg');">
+        <div class="max-w-7xl mx-auto px-6 text-center lg:text-left">
+            <span class="text-emerald-500 font-black uppercase tracking-[0.3em] text-xs" data-aos="fade-up">Strategic Forestry 2025</span>
+            <h1 class="text-4xl md:text-7xl font-black uppercase mt-4 mb-6 leading-none">
+                Technical <br class="hidden md:block"> <span class="gradient-text">Consultancy</span>
+            </h1>
+            <p class="max-w-xl text-gray-400 text-lg mx-auto lg:mx-0">
+                Strategic technical expertise focusing on analysis, legal compliance, and long-term tree management.
+            </p>
+        </div>
+    </header>
+
+    <div class="sticky top-0 z-40 bg-[#0b1110]/80 backdrop-blur-md border-b border-white/5 lg:hidden">
+        <nav class="flex overflow-x-auto no-scrollbar py-4 px-4 gap-4">
+            <a href="#planning" class="whitespace-nowrap px-4 py-2 text-xs font-bold uppercase tracking-wider text-gray-400">Planning</a>
+            <a href="#legal" class="whitespace-nowrap px-4 py-2 text-xs font-bold uppercase tracking-wider text-gray-400">Risk</a>
+            <a href="#diagnosis" class="whitespace-nowrap px-4 py-2 text-xs font-bold uppercase tracking-wider text-gray-400">Diagnosis</a>
+            <a href="#construction" class="whitespace-nowrap px-4 py-2 text-xs font-bold uppercase tracking-wider text-gray-400">Infrastructure</a>
+        </nav>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <div class="flex flex-col lg:flex-row gap-16">
+            
+            <aside class="hidden lg:block w-64 flex-shrink-0">
+                <div class="sticky top-32 space-y-2">
+                    <p class="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-6 px-4">Consultancy Scope</p>
+                    <a href="#planning" class="sidebar-link block px-4 py-3 rounded-lg text-sm font-semibold transition hover:bg-white/5">Strategic Planning</a>
+                    <a href="#legal" class="sidebar-link block px-4 py-3 rounded-lg text-sm font-semibold transition hover:bg-white/5">Risk & Compliance</a>
+                    <a href="#diagnosis" class="sidebar-link block px-4 py-3 rounded-lg text-sm font-semibold transition hover:bg-white/5">Advanced Diagnosis</a>
+                    <a href="#construction" class="sidebar-link block px-4 py-3 rounded-lg text-sm font-semibold transition hover:bg-white/5">Infrastructure</a>
+                </div>
+            </aside>
+
+            <div class="flex-1 space-y-24">
+
+                <section id="planning" class="scroll-mt-24" data-aos="fade-up">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <h2 class="text-3xl font-black uppercase tracking-tight">Strategic Planning</h2>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="service-card p-6 rounded-2xl">
+                            <h4 class="font-bold text-emerald-400 mb-2">Management Plans</h4>
+                            <p class="text-gray-400 text-sm">Developing comprehensive Tree Management Plans for corporate sites, municipalities, and large estates using 2025 data modeling.</p>
+                        </div>
+                        <div class="service-card p-6 rounded-2xl">
+                            <h4 class="font-bold text-emerald-400 mb-2">Impact Assessments</h4>
+                            <p class="text-gray-400 text-sm">Arboricultural Impact Assessments (AIA) and detailed preservation plans to protect tree health during construction builds.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative rounded-3xl overflow-hidden p-8 bg-emerald-900/10 border border-emerald-500/20">
+                        <h4 class="text-xl font-black mb-2 uppercase">Climate Resilience</h4>
+                        <p class="text-gray-400 text-sm italic">"Selecting climate-resilient species based on local soil conditions and urban infrastructure constraints."</p>
+                    </div>
+                </section>
+
+                <section id="legal" class="scroll-mt-24" data-aos="fade-up">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 bg-white text-gray-900 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h2 class="text-3xl font-black uppercase tracking-tight">Risk & Legal</h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="service-card p-6 rounded-2xl flex gap-6">
+                            <span class="text-3xl font-black text-emerald-500/20">01</span>
+                            <div>
+                                <h5 class="font-bold mb-1">Tree Risk Assessments <span class="text-[8px] bg-emerald-500/20 px-2 py-0.5 rounded ml-2">CRITICAL</span></h5>
+                                <p class="text-gray-400 text-sm">Detailed inspections to identify hazardous conditions and structural decay to mitigate liability.</p>
+                            </div>
+                        </div>
+                        <div class="service-card p-6 rounded-2xl flex gap-6">
+                            <span class="text-3xl font-black text-emerald-500/20">02</span>
+                            <div>
+                                <h5 class="font-bold mb-1">Expert Witness & Testimony</h5>
+                                <p class="text-gray-400 text-sm">Authoritative legal testimony for disputes involving tree damage or property boundaries.</p>
+                            </div>
+                        </div>
+                        <div class="service-card p-6 rounded-2xl flex gap-6">
+                            <span class="text-3xl font-black text-emerald-500/20">03</span>
+                            <div>
+                                <h5 class="font-bold mb-1 uppercase text-xs tracking-widest">Permit & Ordinance Navigation</h5>
+                                <p class="text-gray-400 text-sm">Navigating local protection ordinances and complex permit applications to avoid costly fines.</p>
+                            </div>
+                        </div>
+                        <div class="service-card p-6 rounded-2xl flex gap-6">
+                            <span class="text-3xl font-black text-emerald-500/20">04</span>
+                            <div>
+                                <h5 class="font-bold mb-1">Financial Appraisals (CTLA)</h5>
+                                <p class="text-gray-400 text-sm">Determining monetary value for insurance claims or real estate transactions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="diagnosis" class="scroll-mt-24" data-aos="fade-up">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h2 class="text-3xl font-black uppercase tracking-tight">Technical Diagnosis</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="service-card p-6 rounded-2xl text-center">
+                            <i class="fa-solid fa-satellite text-emerald-500 text-2xl mb-3"></i>
+                            <p class="font-bold text-sm">GIS / LiDAR</p>
+                        </div>
+                        <div class="service-card p-6 rounded-2xl text-center">
+                            <i class="fa-solid fa-wave-square text-emerald-500 text-2xl mb-3"></i>
+                            <p class="font-bold text-sm">Resistograph</p>
+                        </div>
+                        <div class="service-card p-6 rounded-2xl text-center">
+                            <i class="fa-solid fa-bugs text-emerald-500 text-2xl mb-3"></i>
+                            <p class="font-bold text-sm">Pathogens</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="construction" class="scroll-mt-24 pb-20" data-aos="fade-up">
+                    <h2 class="text-3xl font-black uppercase mb-8">Green Infrastructure</h2>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-circle-check text-emerald-500"></i> TPZ Implementation
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-circle-check text-emerald-500"></i> Blue/Green Cooling Strategies
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300 text-sm">
+                                <i class="fa-solid fa-circle-check text-emerald-500"></i> Soil Volume Engineering
+                            </li>
+                        </ul>
+                        <div class="rounded-3xl overflow-hidden border border-white/10">
+                            <img src="images/sample/bg3.jpg" class="w-full h-48 object-cover">
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="py-20 bg-emerald-950 text-center px-6">
+        <h2 class="text-3xl font-black mb-8 uppercase">Ready for Technical Solutions?</h2>
+        <a href="contact.html" class="inline-block bg-white text-emerald-950 px-10 py-4 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition shadow-xl">
+            Consult an Expert
+        </a>
+    </section>
+
+    <div class="lg:hidden mobile-nav">
+        <a href="#planning" class="text-white text-xs"><i class="fa-solid fa-map"></i></a>
+        <a href="#legal" class="text-white text-xs"><i class="fa-solid fa-gavel"></i></a>
+        <a href="#diagnosis" class="text-white text-xs"><i class="fa-solid fa-flask"></i></a>
+        <a href="#construction" class="text-white text-xs"><i class="fa-solid fa-city"></i></a>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="loader.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // We wait for the loader.js logic to finish or the DOM to be ready
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize AOS
+            AOS.init({ duration: 800, once: true });
+
+            // Active Sidebar Logic for Technical Page
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".sidebar-link, .mobile-nav a");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - 200) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active", "text-emerald-500");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("active", "text-emerald-500");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
